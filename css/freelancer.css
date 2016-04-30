@@ -54,7 +54,7 @@ hr.star-primary:after {
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 hr.star-light {
@@ -99,12 +99,12 @@ header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 700;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
+    font-size: 0.625em;
     font-weight: 300;
 }
 
@@ -115,11 +115,11 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 2.375em;
     }
 
     header .intro-text .skills {
-        font-size: 1.75em;
+        font-size: 0.875em;
     }
 }
 
@@ -132,7 +132,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 1em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -176,7 +176,7 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 section.success {
@@ -293,7 +293,7 @@ section.success a.active {
     padding-left: 0;
     border: 0;
     border-radius: 0;
-    font-size: 1.5em;
+    font-size: 0.75em;
     background: 0 0;
     box-shadow: none!important;
     resize: none;
@@ -407,7 +407,7 @@ footer .footer-below {
 
 .portfolio-modal .modal-content h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 .portfolio-modal .modal-content img {
