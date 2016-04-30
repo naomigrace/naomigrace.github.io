@@ -17,6 +17,10 @@
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
 
+<!-- Highlighting Things -->
+<link rel="stylesheet" href="highlight/dracula.css">
+<script>hljs.initHighlightingOnLoad();</script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -87,8 +91,14 @@
         <div class="container">
             <div class="row">
                 <div class=".col-lg-12">
-                      <h2>CS 2150: Program and Data Representation</h2>
-                        <br><a href="#" data-toggle="modal" data-target="#LinkedLists">Lab 1: Introduction to C++</a> <span class="label label-default">C++</span>
+                      <h2>Program and Data Representation</h2>
+                      <br><b>Title</b> : <a href="http://aaronbloomfield.github.io/pdr/README.html">CS 2150 - Program and Data Representation</a>
+                      <br><b>Instructor</b> : <a href="https://www.cs.virginia.edu/people/faculty/bloomfield.html">Bloomfield</a>
+                      <br><b>Completed</b> : 2016, 2nd year, spring
+                      <br><b>Grade</b> : fill in here
+
+                      <br>
+                        <br><a href="#" data-toggle="modal" data-target="#IntroCPlusPlus">Lab 1: Introduction to C++</a> <span class="label label-default">C++</span>
                         <br><a href="#" data-toggle="modal" data-target="#LinkedLists">Lab 2: Linked Lists</a> <span class="label label-default">C++</span>
                         <br><a href="#" data-toggle="modal" data-target="#Stacks">Lab 3: Stacks</a> <span class="label label-default">C++</span>
                         <br><a href="#" data-toggle="modal" data-target="#NumberRep">Lab 4: Number Representation</a> <span class="label label-default">C++</span>
@@ -137,12 +147,58 @@
             <h4 class="modal-title" id="myModalLabel">Lab 1: Introduction to C++</h4>
           </div>
           <div class="modal-body">
-            <br>The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab01/index.html">here</a>
+            The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab01/index.html">here</a>
             <br>
+            <br><b>Learning Experiences/Notes</b>
+            <ul>
+              <li>Installing Unix on my PC as Ubutu - turning a USB into a bootable USB</li>
+              <li>Linux is case sensitive</li>
+              <li>You can't write Java constructor code inside your cpp documents - Dog enzo = new Dog() is not allowed.</li>
+              <li>If a subroutine is part of a class, it is called a <i>method.</i> Outside? It's called a <i>function</i></li>
+              </ul>
             <br>
-            <br><b>Possible Future Improvements</b>
-            <br>
-            <br>
+
+<pre><code>
+/*
+ * Naomi-Grace Panlaqui
+ * ncp3qm
+ * xToN.cpp
+ * 1/24/2016
+ */
+
+#include <iostream>
+using namespace std;
+
+int xton(int a, int b) {
+  if(b==0){
+    return 1;
+  }
+  else{
+    return a * xton(a, b-1);
+  }
+}
+
+int main() {
+  int x,y,z;
+
+  // Obtain the two integers
+  cout << "Enter two integer values and";
+  << "I will raise the first\n";
+  cout << "by the value of the second.\n";
+  cout << "First integer: " << endl;
+  cin >> x;
+  cout << "Second integer: " << endl;
+  cin >> y;
+
+  // Compute the power
+  z=xton(x,y);
+  cout << x << " raised to the power of "
+       <<  y << " is " <<  z << endl;
+  return 0;
+}</code></pre>
+
+
+
 
           </div>
           <div class="modal-footer">
@@ -163,12 +219,20 @@
             <h4 class="modal-title" id="myModalLabel">Lab 2: Linked Lists</h4>
           </div>
           <div class="modal-body">
-            <br>The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab02/index.html">here</a>
+            The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab02/index.html">here</a>
             <br>
-            <br>
-            <br><b>Possible Future Improvements</b>
-            <br>
-            <br>
+            <br>Created January 29, 2016
+            <br>List.cpp (other .cpp and .h files are ommited)
+
+
+            <pre><code class=language-html data-lang=html>
+              <span class=nt>&lt;div</span> <span class=na>class=</span><span class=s>"container"</span><span class=nt>&gt;</span>
+              ...
+            <span class=nt>&lt;/div&gt;</span></code></pre></figure> <p>Use <code>.container-fluid</code> for a full width container, spanning the entire width of your viewport.</p>
+
+
+
+
 
           </div>
           <div class="modal-footer">
@@ -425,6 +489,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+
+    <!-- Highlighting Scripty Thing -->
+    <script src="highlight/highlight.pack.js"</script>
 
 </body>
 
