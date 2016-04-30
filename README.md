@@ -1,2 +1,0 @@
-# naomigrace.github.io
-Readme
