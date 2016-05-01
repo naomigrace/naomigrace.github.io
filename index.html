@@ -163,10 +163,10 @@
                         <br><a href="#" data-toggle="modal" data-target="#Hashing">Lab 6: Hashing</a> <span class="label label-default">c++</span> <span class="label label-default">bash</span>
                         <br><a href="#" data-toggle="modal" data-target="#Machine">Lab 7: Machine Language</a> <span class="label label-default">ibcm</span> <span class="label label-default">bash</span>
                         <br><a href="#" data-toggle="modal" data-target="#Assembly1">Lab 8: Assembly Language Part 1</a> <span class="label label-default">x86</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Assembly2">Lab 9: Assembly Language Part 2</a> <span class="label label-default">x86</span>
+                        <br><a href="#" data-toggle="modal" data-target="#Assembly2">Lab 9: Assembly Language Part 2</a> <span class="label label-default">x86</span> <span class="label label-default">c</span>
                         <br><a href="#" data-toggle="modal" data-target="#Huffman">Lab 10 Huffman Coding</a> <span class="label label-default">c++</span>
                         <br><a href="#" data-toggle="modal" data-target="#Graphs">Lab 11: Graphs</a> <span class="label label-default">c++</span>
-                        <br>Lab 12: Conclusion <span class="label label-default">objective c</span>
+                        <br><a href="#" data-toggle="modal" data-target="#ObjectiveC">Lab 12: Conclusion</a> <span class="label label-default">objective c</span>
                 </div>
             </div>
         </div>
@@ -303,7 +303,7 @@ int main() {
                 <li>reassign the pointer to <code>NULL</code></li>
               </ul>
               <li>Since we were just getting in the swing of C++, some of the harder (at the time) methods provided to us are the copy constructor and equals operator
-                <li>Although I drew out pointer diagrams to complete this lab, I also made some redundant comments (ex. "point newGuy's next to current ... " because I was having difficulty with the concept of pointers at the time. After I completed this lab, I definitely had command of them.
+                <li>Although I drew out pointer diagrams to complete this lab, I also made some redundant comments (ex. "point newGuy's next to current ... " because I was having difficulty with the concept of pointers at the time. After I completed this lab, however, I definitely had command of them.
               </ul>
 
             <br><b>list.cpp</b>
@@ -2323,6 +2323,127 @@ void printRoute (string start, vector&lt;string&gt; dests) {
         </div>
       </div>
     </div>
+
+
+
+    <!-- Graph Modal -->
+    <div class="modal fade" id="ObjectiveC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 12: Conclusion</h4>
+          </div>
+          <div class="modal-body">
+          Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab12/index.html">here</a>
+            <br>
+            <br>
+
+
+<b>linkedlist.m</b>
+<pre><code class="c">#import &lt;Foundation/NSObject.h&gt;
+
+@interface ListNode : NSObject {
+@private
+  int val;
+  ListNode *next;
+}
+
+- (id) val: (int) val_value;
+- (int) val;
+- (id) next: (ListNode*) next_value;
+- (ListNode*) next;
+
+@end
+
+@implementation ListNode
+
+- (id) val: (int) val_value {
+  val = val_value;
+  return self;
+}
+
+- (int) val {
+  return val;
+}
+
+- (id) next: (ListNode*) next_value {
+  next = next_value;
+  return self;
+}
+
+- (ListNode*) next {
+  return next;
+}
+
+@end
+
+
+
+int main (void) {
+
+  ListNode *cur = [ListNode new];
+
+  int amount = 0;
+  printf("Enter how many values to enter\n");
+  scanf("%d", &amount);
+
+  int i;
+  for(i = 1; i < amount+1; i++){
+    int value;
+    printf("Enter value %d: ", i);
+    scanf("%d", &value);
+
+    ListNode *node = [ListNode new];
+    [node val: value];
+    [node next: cur];
+    cur = node;
+  }
+
+  int j;
+  for(j = 0; j < amount; j++){
+    int pr = [cur val];
+    printf("%d\n", pr);
+    cur = [cur next];
+  }
+
+  /* idea from my makeEmpty() function from List.cpp*/
+  ListNode *removeThis = [cur next];
+
+  while(removeThis != NULL){
+    // what lovely syntax we got here...
+    // setting cur's next to the next of cur next
+    [cur next: [[cur next] next]];
+    [removeThis release];
+    removeThis = [cur next];
+  }
+
+
+  return 0;
+}</code></pre>
+
+<samp>Enter how many values to enter<br>
+4<br>
+Enter value 1: 2<br>
+Enter value 2: 4<br>
+Enter value 3: 6<br>
+Enter value 4: 8<br>
+8<br>
+6<br>
+4<br>
+2</samp>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
 
 
