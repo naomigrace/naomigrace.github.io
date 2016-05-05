@@ -163,3 +163,27 @@ of those sections to manage the look and feel of the site. */
 .blocky-12 {
   background-color: #DE502F;
 }
+
+
+/* Fading photos */
+
+
+#img-fade {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+}
+
+#img-fade img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+#img-fade img.top:hover {
+  opacity:0;
+}
