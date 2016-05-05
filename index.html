@@ -26,12 +26,11 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-
   <!-- Highlighting Things -->
-  <script src="/js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <link rel="stylesheet" href="/css/dracula.css">
 
+  <script src="https://highlightjs.org/static/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/dracula.css">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -281,32 +280,6 @@
 
 
 
-                        <!--<br>Lab 1: Introduction to C++</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#LinkedLists">Lab 2: Linked Lists</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Stacks">Lab 3: Stacks</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#NumberRep">Lab 4: Number Representation</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Trees">Lab 5: Trees</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">makefile</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Hashing">Lab 6: Hashing</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">makefile</span> <span class="label label-default">c++</span> <span class="label label-default">bash</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Machine">Lab 7: Machine Language</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">ibcm</span> <span class="label label-default">bash</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Assembly1">Lab 8: Assembly Language Part 1</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">gdb</span> <span class="label label-default">makefile</span> <span class="label label-default">x86</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Assembly2">Lab 9: Assembly Language Part 2</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">gdb</span> <span class="label label-default">makefile</span> <span class="label label-default">x86</span> <span class="label label-default">c</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Huffman">Lab 10 Huffman Coding</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">makefile</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#Graphs">Lab 11: Graphs</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">lldb</span> <span class="label label-default">makefile</span> <span class="label label-default">c++</span>
-                        <br><a href="#" data-toggle="modal" data-target="#ObjectiveC">Lab 12: Conclusion</a>
-                            <span class="label label-default">linux</span> <span class="label label-default">objective c</span>-->
-
-
 
 <a class="btn btn-default btn-success page-scroll" href="#prevEducation">back to my previous CS courses</a>
 <br>
@@ -385,6 +358,12 @@
 
 
     <!-- Linked Lists Modal -->
+
+
+
+
+
+
     <div class="modal fade" id="IntroCPlusPlus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -406,8 +385,12 @@
               </ul>
               <li>If a subroutine is part of a class, it is called a <i>method.</i> Outside? It's called a <i>function</i></li>
               </ul>
+
+
+
+
 <br><b>xToN.cpp</b>
-<pre><code class ="cpp">#include &lt;iostream&gt;
+<pre><code class="c++">#include &lt;iostream&gt;
 using namespace std;
 
 int xton(int a, int b) {
@@ -1340,8 +1323,106 @@ int TreeCalc::calculate() {
           </div>
           <div class="modal-body">
             Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab06/index.html">here</a>
+            <br>Some of the methods are provided by the instructor and are marked with his name.
+            <br>The precomputed powers of 11 were obtained by writing a recursive power method in a cpp file and outputting the results to a txt file for ease of copying.
             <br>
             <br>
+<b>hashTable.cpp</b>
+<pre><code class="cpp">#include "hashTable.h"
+
+using namespace std;
+
+// precomputed powers of 11
+unsigned int eleven[127] ={1, 11, 121, 1331, 14641, 161051, 1771561, 19487171, 214358881, 2357947691, 167620825, 1843829075, 3102250641, 4059985979, 1710172809, 1632031715, 772479681, 4202309195, 3275728185, 1673271667, 1226119153, 602408795, 2331529449, 4171987459, 2942189089, 2299308907, 3817561497, 3338470803, 2363440465, 228041339, 2508454729, 1823198243, 2875311489, 1563655307, 20339193, 223731123, 2461042353, 1301662107, 1433381289, 2882292291, 1640444129, 865016235, 925243993, 1587749331, 285373457, 3139108027, 170449929, 1874949219, 3444572225, 3530556107, 181411513, 1995526643, 475956593, 940555227, 1756172905, 2138032771, 2043524001, 1003927531, 2453268249, 1216146963, 492714705, 1124894459, 3783904457, 2968243363, 2585905921, 2675161355, 3656971129, 1571976755, 111875121, 1230626331, 651987753, 2876897987, 1581106785, 212305451, 2335359961, 4214123091, 3405681041, 3102753083, 4065512841, 1770968291, 2300782017, 3833765707, 3516717113, 29182579, 321008369, 3531092059, 187306985, 2060376835, 1189308705, 197493867, 2172432537, 2421921427, 871331921, 994716539, 2351947337, 101616931, 1117786241, 3705714059, 2108148985, 1714802355, 1682956721, 1332654747, 1774300329, 2337434435, 4236942305, 3656692395, 1568910681, 78148307, 859631377, 866010555, 936181513, 1708062051, 1608813377, 517077963, 1392890297, 2436891379, 1036001393, 2806080731, 802116969, 233352067, 2566872737, 2465796331, 1353955865, 2008612627, 619902417, 2523959291, 1993748425};
+
+// constructor pass size
+hashTable::hashTable(int s){
+
+ theHash = new vector&lt;list&lt;string&gt; &gt;;
+
+ size = getNextPrime(s * 4);
+
+  // uses vector resize function
+  theHash-&gt;resize(size);
+
+  // initialize each of the values within the
+  // vector to a list
+  for (int i = 0; i &lt; size; i++){
+    list&lt;string&gt; ls;
+    theHash-&gt;push_back(ls);
+  }
+}
+
+// destructor
+hashTable::~hashTable(){
+  delete theHash;
+}
+
+unsigned int hashTable::hashFunction(const string &s) const{
+  unsigned int hash = 0;
+  for (int i = 0; i &lt; s.length(); i++){
+    //hash += s[i];
+    hash += (s[i] * eleven[(int)s[i]]);
+  }
+  return hash % this-&gt;size;
+}
+
+
+// find function
+bool hashTable::found(const string &s){
+
+  // locates list using hash function
+  list&lt;string&gt; &l = theHash-&gt;at(hashFunction(s));
+
+  // at the list we found, run through
+  for(list&lt;string&gt;::iterator it = l.begin(); it!= l.end(); ++it){
+    if(*it == s) {
+      return true;
+    }
+  }
+  return false;
+
+}
+
+// insert function
+void hashTable::insert(const string &s){
+  // if not duplicate and length greater than 3,
+  if (!(this-&gt;found(s)) && !(s.length() &lt; 3)){
+    list&lt;string&gt; &l = theHash-&gt;at(hashFunction(s));
+    l.push_back(s);
+    //cout &lt;&lt; s &lt;&lt; endl;
+  }
+}
+
+
+bool hashTable::checkprime(unsigned int p) {
+// Prime number generation code
+// written by Aaron Bloomfield, 2014
+    if ( p &lt;= 1 ) // 0 and 1 are not primes; the are both special cases
+        return false;
+    if ( p == 2 ) // 2 is prime
+        return true;
+    if ( p % 2 == 0 ) // even numbers other than 2 are not prime
+        return false;
+    for ( int i = 3; i*i &lt;= p; i += 2 ) // only go up to the sqrt of p
+        if ( p % i == 0 )
+            return false;
+    return true;
+}
+
+
+int hashTable::getNextPrime (unsigned int n) {
+// Prime number generation code
+// written by Aaron Bloomfield, 2014
+    while ( !checkprime(++n) );
+    return n; // all your primes are belong to us
+}
+</code></pre>
+
+
+<br>
+<br>
+
 <b>WordPuzzle.cpp</b>
 <pre><code class="cpp">#include "hashTable.h"
 #include "timer.h"
@@ -1657,7 +1738,7 @@ char* getWordInTable (int startRow, int startCol, int dir, int len,
             <br>Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab07/index.html">here</a>
             <br>
             <br>
-            IBCM was developed at UVA a long time ago to give an introduction to machine language.
+            IBCM was developed at UVA a long time ago to give students an introduction to machine language.
             <br>I enjoyed this unit, mostly because I thought the blur between data and executable
             <br>program code was really cool.
             <br>

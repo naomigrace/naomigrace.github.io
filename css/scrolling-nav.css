@@ -27,8 +27,6 @@ html {
     }
 }
 
-
-
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
@@ -95,9 +93,6 @@ of those sections to manage the look and feel of the site. */
 
 
 
-
-
-
 /* Colored Content Boxes
 ------------------------------------*/
 
@@ -124,16 +119,12 @@ of those sections to manage the look and feel of the site. */
 .modal-title {
   color: #000;
   text-transform: none;
-
 }
 
 .blocky:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
 }
-
-
-
 
 .blocky-1 {
   background-color: #D9465E;
