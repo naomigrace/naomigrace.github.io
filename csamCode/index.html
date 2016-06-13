@@ -64,6 +64,9 @@
     color: #fff !important;
     background-color: #364f6c !important;
   }
+
+
+
   </style>
 </head>
 
@@ -82,16 +85,12 @@
       <ul class="nav navbar-nav">
         <li class="active"><a class="maplink" href="#" style="color:#249f60;" ><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
         <!-- map layers dropdown -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><br><i class="fa fa-file-o fa-lg" aria-hidden="true"></i><br>layers<span class="caret"></span></a>
+        <li class="dropup">
+          <a href="#" class="dropdown-toggle" style="color:#2e9eb6;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i><br>layers<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
-            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-car fa-lg" aria-hidden="true"></i><br>traffic</a></li>
+            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-car fa-lg" id="trafficToggle" aria-hidden="true"></i><br>traffic</a></li>
             <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-ambulance fa-lg" aria-hidden="true"></i><br>hospitals</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
 
@@ -167,8 +166,18 @@
 
         // initializes and displays traffic layer
         var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
+        google.maps.event.addDomListener(document.getElementById('trafficToggle'), 'click', toggleTraffic);
 
+        function toggleTraffic(){
+          if(trafficLayer.getMap() == null){
+            // traffic layer disabled --> lets enable
+            trafficLayer.setMap(map);
+          } else {
+            // otherwise, lets disable
+            trafficLayer.setMap(null);
+          }
+
+        }
 
       }, function() {
         handleLocationError(true, infoWindow, map.getCenter());
