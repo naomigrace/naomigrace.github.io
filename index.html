@@ -138,6 +138,9 @@
         });
         var infoWindow = new google.maps.InfoWindow({map: map});
 
+        var trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -151,13 +154,7 @@
               lng: -77.036412
             };
 
-            map.setCenter(pos);
-
-            var you = new google.maps.Marker({
-              position: pos,
-              map: map,
-              title: 'Your current location'
-            });
+            map.setCenter(whiteHouse);
 
             var marker_1 = new google.maps.Marker({
               position: whiteHouse,
