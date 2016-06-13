@@ -7,7 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Fontawesome CSS -->
     <script src="https://use.fontawesome.com/469c8a0402.js"></script>
@@ -19,9 +20,58 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700' rel='stylesheet' type='text/css'>
 
     <style>
-      #map-container{
-        height:100%;
-      }
+
+    body, html {
+      margin-top: 25px;
+      height: 100%;
+      width: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .navbar-collapse.collapse {
+      display: block!important;
+    }
+
+    .navbar-nav>li, .navbar-nav {
+      float: left !important;
+    }
+
+    .navbar-nav.navbar-right:last-child {
+      margin-right: -15px !important;
+    }
+
+    .navbar-right {
+      float: right!important;
+    }
+
+    #map-container {
+      width: 100%;
+      height: 80%;
+      padding-bottom: 100px;
+    }
+
+    .navbar-default {
+      text-align: center;
+    }
+
+    .navbar-default .navbar-brand{
+      color: #364f6c;
+    }
+
+    .navbar-default .navbar-brand:hover{
+
+      background-color: #364f6c;
+      color: #fff;
+    }
+
+    ul.nav a:hover {
+      color: #fff !important;
+      background-color: #364f6c !important;
+    }
+
+
+
+
     </style>
 
   </head>
@@ -29,90 +79,51 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand navbar-header" href="#">COMMANDER <i class="fa fa-star fa-2x" aria-hidden="true"></i> SAM</a>
+        <a class="navbar-brand navbar-header" href="#">COMMANDER <i class="fa fa-star" aria-hidden="true"></i> SAM</a>
       </div>
     </nav>
 
-<div class="row">
- 
-    <div id="map-container" class="col-md-6"></div>
-    
-  
-  
 
-</div>
- 
-    
+    <div id="map-container"></div>
+
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container-fluid">
-
         <!-- Collect the nav links, forms, and other content for toggling -->
 
           <ul class="nav navbar-nav">
-
-
-            <li class="active"><a href="#"><i class="fa fa-map-o fa-2x" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
-            <li><a href="#"><i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i><br>news</a></li>
-            <li><a href="#"><i class="fa fa-sun-o fa-2x" aria-hidden="true"></i><br>weather</a></li>
-            <li><a href="#"><i class="fa fa-bell fa-2x" aria-hidden="true"></i><br>alerts</a></li>
+            <li class="active"><a class="maplink" href="#" style="color:#249f60;" ><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
+            <li><a href="#" style="color: #d5681a;"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i><br>news</a></li>
+            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
+            <li><a href="#" style="color: #e64966;"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i><br>alerts</a></li>
+            <li><a href="#"><i class="fa fa-sliders fa-lg" aria-hidden="true"></i><br>settings</a></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-sliders fa-2x" aria-hidden="true"></i><span class="caret"></span><br>settings</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">A setting</a></li>
-                <li><a href="#">Another setting</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-          </ul>
+
 
       </div><!-- /.container-fluid -->
     </nav>
 
 
 
-<!--
-<nav class="navbar navbar-default navbar-fixed-top">
-
-    <div class="container-fluid">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">S.A.M</a>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
-
-      <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="btn btn-default" href="#"><i class="fa fa-map-o fa-2x" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-sun-o fa-2x" aria-hidden="true"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class ="nav-link" href="#"><i class="fa fa-sliders fa-2x" aria-hidden="true"></i></a>
-      </li>
-      <p class="navbar-text">signed in as Enzo Ferrari</p>
-    </ul>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
-
-  </nav>-->
-
-
-
+  </div>
+</div>
 
     <!-- jQuery first, then Bootstrap JS.
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -122,30 +133,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script>	
-	
-      function init_map() {
-		var myLocation = new google.maps.LatLng(45.430817,12.331516);
-		  
-        var mapOptions = {
-          center: myLocation,
-          zoom: 14
-        };
-		
-		var marker = new google.maps.Marker({
-			position: myLocation,
-			title:"Peggy Guggenheim Collection"});
-			
-        var map = new google.maps.Map(document.getElementById("map-container"),
-            mapOptions);
-		
-		marker.setMap(map);	
 
+    <script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 15
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+
+            var you = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'You are here!'
+            });
+
+
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
       }
-	  
-      google.maps.event.addDomListener(window, 'load', init_map);
-	  
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
     </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc3atO9ejGuLcjkv5ejP7HQlV5EYySaok&callback=initMap">
+    </script>
+
+
+
+
   </body>
 </html>
