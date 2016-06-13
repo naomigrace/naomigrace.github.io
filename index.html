@@ -84,9 +84,6 @@
     </nav>
 
 
-    <div id="map-container"></div>
-
-
     <nav class="navbar navbar-default navbar-fixed-bottom">
       <div class="container-fluid">
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -99,14 +96,13 @@
             <li><a href="#"><i class="fa fa-sliders fa-lg" aria-hidden="true"></i><br>settings</a></li>
           </ul>
 
-
-
       </div><!-- /.container-fluid -->
     </nav>
 
 
 
-    <!-- Modal -->
+    <!-- Map and Modal -->
+<div id="map-container"></div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -150,6 +146,11 @@
               lng: position.coords.longitude
             };
 
+            var whiteHouse = {
+              lat: 38.897627,
+              lng: -77.036412
+            };
+
             map.setCenter(pos);
 
             var you = new google.maps.Marker({
@@ -158,6 +159,14 @@
               title: 'Your current location'
             });
 
+            var marker_1 = new google.maps.Marker({
+              position: whiteHouse,
+              map: map
+            });
+
+            google.maps.event.addListener(marker_1, 'click', function(){
+              $('#myModal').modal('show')
+            });
 
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
