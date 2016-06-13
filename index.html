@@ -1,192 +1,2716 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
+
+<head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap CSS <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Naomi-Grace's Portfolio</title>
 
-    <!-- Fontawesome CSS -->
-    <script src="https://use.fontawesome.com/469c8a0402.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
 
-    <!-- Source Sans Pro Font -->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700' rel='stylesheet' type='text/css'>
 
-    <style>
+</head>
 
-    body, html {
-      margin-top: 25px;
-      height: 100%;
-      width: 100%;
-      font-family: 'Source Sans Pro', sans-serif;
-    }
-
-    .navbar-collapse.collapse {
-      display: block!important;
-    }
-
-    .navbar-nav>li, .navbar-nav {
-      float: left !important;
-    }
-
-    .navbar-nav.navbar-right:last-child {
-      margin-right: -15px !important;
-    }
-
-    .navbar-right {
-      float: right!important;
-    }
-
-    #map-container {
-      width: 100%;
-      height: 80%;
-      padding-bottom: 100px;
-    }
-
-    .navbar-default {
-      text-align: center;
-    }
-
-    .navbar-default .navbar-brand{
-      color: #364f6c;
-    }
-
-    .navbar-default .navbar-brand:hover{
-
-      background-color: #364f6c;
-      color: #fff;
-    }
-
-    ul.nav a:hover {
-      color: #fff !important;
-      background-color: #364f6c !important;
-    }
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 
 
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    </style>
+  <!-- Highlighting Things -->
 
-  </head>
-  <body>
+  <script src="https://highlightjs.org/static/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/dracula.css">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand navbar-header" href="#">COMMANDER <i class="fa fa-star" aria-hidden="true"></i> SAM</a>
-      </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Naomi-Grace</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#prevEducation">Education</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#cs2150">Latest</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>
 
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <h1>Hello. Call me NG.</h1>
+                    <p>
+                      <h2>I'm an eager learner and problem solver that likes getting down in the nitty gritty details.</h2>
+                      <br>
+                      <br><h3>As a 2nd year Computer Science student at UVA, learning the tools of the trade has been a blast so far.</h3>
+                    </p>
+                    <br>
+                    <a class="btn btn-success btn-lg page-scroll" href="#cs2150">view my latest</a>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-      <div class="container-fluid">
-        <!-- Collect the nav links, forms, and other content for toggling -->
 
-          <ul class="nav navbar-nav">
-            <li class="active"><a class="maplink" href="#" style="color:#249f60;" ><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
-            <li><a href="#" style="color: #d5681a;"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i><br>news</a></li>
-            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
-            <li><a href="#" style="color: #e64966;"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i><br>alerts</a></li>
-            <li><a href="#"><i class="fa fa-sliders fa-lg" aria-hidden="true"></i><br>settings</a></li>
-          </ul>
+    <!-- Education Section -->
+    <section id="prevEducation" class="prevEducation-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1>Java Courses</h3>
+            </div>
+          </div>
 
-      </div><!-- /.container-fluid -->
-    </nav>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><a href="https://cs1110.cs.virginia.edu/s15/">CS 1110: Introduction to Programming</a></h3>
+                    <p>
+                      <br><b>Taught by</b> : <a href="https://www.cs.virginia.edu/people/faculty/tychonievich.html">Professor Tychonievich</a>
+                      <br><b>Completed in</b> : 2015, 1st year, spring
+                      <br><b>With grade of</b> : A-
+                      <br>
+                      <br>(homework and lab projects to be added)
+
+                    </p>
+                    <br>
+
+                </div>
+
+                <div class="col-md-6">
+                    <h3>CS 2110: Software Developement Methods</h3>
+                    <p>
+                      <br><b>Taught by</b> : <a href="https://www.cs.virginia.edu/people/faculty/basit.html">Professor Basit</a>
+                      <br><b>Completed in</b> : 2016, 2nd year, fall
+                      <br><b>With grade of</b> : A
+                      <br>
+                      <br>(homework and lab projects to be added)
+                    </p>
+                    <br>
+                  </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                 <a class="btn btn-default btn-success page-scroll" href="#cs2150">onward to my latest course</a>
+                 <br>
+                 <br>
+                 <br>
+              </div>
+            </div>
 
 
 
-    <!-- Map and Modal -->
-<div id="map-container"></div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </section>
+
+
+
+    <!-- cs2150 Section -->
+    <section id="cs2150" class="cs2150-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                      <h2>C++ (and more) Course</h2>
+                      <h3><a href="http://aaronbloomfield.github.io/pdr/README.html">CS 2150: Program & Data Representation</a></h3>
+                      <b>Taught by</b> : <a href="https://www.cs.virginia.edu/people/faculty/bloomfield.html">Professor Bloomfield</a>
+                      <br><b>Completed in</b> : 2016, 2nd year, spring || <b>With grade of</b> : [fill in when available]
+                      <br>
+                      <br>Selected classes and/or snippets of code from all the labs are below.
+                      <br>(Lab summary and learning experiences/notes to be added soon)
+                      <br>
+                      <br>
+                    </div>
+
+                    <div class="row">
+
+                        <a href="#" data-toggle="modal" data-target="#IntroCPlusPlus"><div class="col-sm-3 col-lg-3">
+                          <div class="blocky blocky-1">
+                          <h5>Lab 1</h5>
+                          <h4><b>Introduction</b><h4>
+                          <h6>linux, c++</h6>
+                          </div>
+                        </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#LinkedLists"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-2">
+                          <h5>Lab 2</h5>
+                          <h4><b>Linked Lists</b><h4>
+                          <h6>linux, lldb, c++</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Stacks"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-3">
+                          <h5>Lab 3</h5>
+                          <h4><b>Stacks</b><h4>
+                          <h6>linux, c++</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#NumberRep"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-4">
+                          <h5>Lab 4</h5>
+                          <h4><b>Numbers</b><h4>
+                          <h6>linux, c++</h6>
+                        </div>
+                      </div></a>
+
+
+                    </div>
+
+                    <div class="row">
+
+                      <a href="#" data-toggle="modal" data-target="#Trees"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-5">
+                          <h5>Lab 5</h5>
+                          <h4><b>Trees</b><h4>
+                          <h6>linux, lldb, makefile, c++</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Hashing"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-6">
+                          <h5>Lab 6</h5>
+                          <h4><b>Hashing</b><h4>
+                          <h6>linux, lldb, makefile, c++, bash</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Machine"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-7">
+                          <h5>Lab 7</h5>
+                          <h4><b>Machine Language</b><h4>
+                          <h6>linux, ibcm, bash</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Assembly1"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-8">
+                          <h5>Lab 8</h5>
+                          <h4><b>Assembly Part 1</b><h4>
+                          <h6>linux, gdb, makefile, x86</h6>
+                        </div>
+                      </div></a>
+
+                    </div>
+
+
+
+                    <div class="row">
+
+                      <a href="#" data-toggle="modal" data-target="#Assembly2"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-9">
+                          <h5>Lab 9</h5>
+                          <h4><b>Assembly Part 2</b><h4>
+                          <h6>linux, gdb, makefile, x86, c</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Huffman"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-10">
+                          <h5>Lab 10</h5>
+                          <h4><b>Huffman Coding</b><h4>
+                          <h6>linux, lldb, makefile, c++</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#Graphs"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-11">
+                          <h5>Lab 11</h5>
+                          <h4><b>Graphs</b><h4>
+                          <h6>linux, lldb, makefile, c++</h6>
+                        </div>
+                      </div></a>
+
+                      <a href="#" data-toggle="modal" data-target="#ObjectiveC"><div class="col-sm-3 col-lg-3">
+                        <div class="blocky blocky-12">
+                          <h5>Lab 12</h5>
+                          <h4><b>Conclusion</b><h4>
+                          <h6>linux, objective c</h6>
+                        </div>
+                      </div></a>
+
+
+                    </div>
+
+
+
+
+
+<a class="btn btn-default btn-success page-scroll" href="#prevEducation">back to my previous CS courses</a>
+<br>
+<br>
+<br>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="project-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 ">
+                    <h1>Projects</h1>
+                    <p>
+                      <br><h3>The beginnings of a summer project will start after finals.
+                        <br>Check back soon.</h3>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-offset-2">
+
+                  <h1>About This</h1>
+                  <p>
+                    <br>I made this to have a nice reference to past work, engage myself in a fun ongoing HTML and CSS side project, and let prospective employers know what I've been working on.
+                    <br>This layout springboards from the <a href="http://startbootstrap.com/template-overviews/scrolling-nav/">scrolling-nav</a> theme with Bootstrap. Color palette is from <a href="http://tools.medialab.sciences-po.fr/iwanthue/">iwanthue</a>.
+                    <br>(p.s. This is the first time I've put HTML and CSS into practice since 6th grade. I don't think responsive web design was a word back then. Exciting stuff.)
+                  </p>
+
+
+                  <h1>About Me</h1>
+                  <p>
+                    <br>In addition to computer science, I also have a love for the earth. Envrionmental Science is my second major.
+                    <br>I listen to vocal jazz, big band jazz, and more. Some of my favorite TV shows are the Dick Van Dyke Show, the Mary Tyler Moore Show, and Taxi.
+                    <br>I was on the rowing team throughout my four years of high school. Being near bodies of water brings me peace.
+                    <br>
+                    <br>
+                    <div id="img-fade">
+                      <img src="pics/occ1.jpg" alt="..." class="img-responsive img-rounded bottom"/>
+                      <img src="pics/occ2.jpg" alt="..." class="img-responsive img-rounded top"/>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </p>
+
+                </div>
+              </div>
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Me</h1>
+                    <br>
+                    <h3>Shoot an email to <a href="malito:ncp3qm@virginia.edu">ncp3qm@virginia.edu</a></h3>
+                    <h3>and I'll respond as soon as possible.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Linked Lists Modal -->
+
+
+
+
+
+
+    <div class="modal fade" id="IntroCPlusPlus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 1: Introduction to C++</h4>
+          </div>
+          <div class="modal-body">
+            The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab01/index.html">here</a>
+            <br>
+            <br><b>Learning Experiences/Notes</b>
+            <ul>
+              <li>Installing Unix on my PC as Ubutu and turning a USB into a bootable USB</li>
+              <li>Linux is case sensitive</li>
+              <li>You can't write Java constructor code inside your cpp documents</li>
+              <ul>
+                <li><code>Dog enzo = new Dog()</code> is not allowed</li>
+                <li><a href="http://www.horstmann.com/ccj2/ccjapp3.html">More differences moving from Java to C++</a>
+              </ul>
+              <li>If a subroutine is part of a class, it is called a <i>method.</i> Outside? It's called a <i>function</i></li>
+              </ul>
+
+
+
+
+<br><b>xToN.cpp</b>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+int xton(int a, int b) {
+  if(b==0){
+    return 1;
+  }
+  else{
+    return a * xton(a, b-1);
+  }
+}
+
+int main() {
+  int x,y,z;
+
+  // Obtain the two integers
+  cout &lt;&lt; "Enter two integer values and";
+  &lt;&lt; "I will raise the first\n";
+  cout &lt;&lt; "by the value of the second.\n";
+  cout &lt;&lt; "First integer: " &lt;&lt; endl;
+  cin &gt;&gt; x;
+  cout &lt;&lt; "Second integer: " &lt;&lt; endl;
+  cin &gt;&gt; y;
+
+  // Compute the power
+  z=xton(x,y);
+  cout &lt;&lt; x &lt;&lt; " raised to the power of "
+       &lt;&lt;  y &lt;&lt; " is " &lt;&lt;  z &lt;&lt; endl;
+  return 0;
+}
+</code></pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-    <!-- jQuery first, then Bootstrap JS.
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>-->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Linked Lists Modal -->
+    <div class="modal fade" id="LinkedLists" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 2: Linked Lists</h4>
+          </div>
+          <div class="modal-body">
+            The lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab02/index.html">here</a>
+            <br>
+            <br>
+            <b>Learning Experiences/Notes</b>
+            <ul>
+              <li>The type of a pointer determines what type they can point to</li>
+              <li><code>delete</code>ing a pointer removes the pointee (what the pointer is pointing to)</li>
+              <li>after removing the pointee, the pointer is pointing out "into space" so you must either</li>
+              <ul>
+                <li>reassign the pointer a different address</li>
+                <li>reassign the pointer to <code>NULL</code></li>
+              </ul>
+              <li>Since we were just getting in the swing of C++, some of the harder (at the time) methods provided to us are the copy constructor and equals operator
+                <li>Although I drew out pointer diagrams to complete this lab, I also made some redundant comments (ex. "point newGuy's next to current ... " because I was having difficulty with the concept of pointers at the time. After I completed this lab, however, I definitely had command of them.
+              </ul>
+
+            <br><b>list.cpp</b>
+<pre><code class ="cpp">#include "List.h"
+using namespace std;
+
+// Constructor
+List::List(){
+  head=new ListNode;
+  tail=new ListNode;
+  head-&gt;next=tail;
+  tail-&gt;previous=head;
+  count=0;
+}
+
+// Copy Constructor
+List::List(const List& source) {
+  head=new ListNode;
+  tail=new ListNode;
+  head-&gt;next=tail;
+  tail-&gt;previous=head;
+  count=0;
+  ListItr iter(source.head-&gt;next);
+  while (!iter.isPastEnd()) {   // deep copy of the list
+    insertAtTail(iter.retrieve());
+    iter.moveForward();
+  }
+}
+
+// Destructor
+List::~List(){
+  makeEmpty();
+  delete head;
+  delete tail;
+}
+
+// Equals operator
+List& List::operator=(const List& source) {
+  if (this == &source)
+    return *this;
+  else {
+    makeEmpty();
+    ListItr iter(source.head-&gt;next);
+    while (!iter.isPastEnd()) {
+      insertAtTail(iter.retrieve());
+      iter.moveForward();
+    }
+  }
+  return *this;
+}
+
+// Returns true if empty; else false
+bool List::isEmpty() const{
+  return count == 0;
+}
+
+// Removes all items except blank head and tail
+void List::makeEmpty(){
+  // if list is full, let's delete the nodes w/values
+  if(!isEmpty()){
+
+  // creates a pointer to a list node at first node w/value
+  ListNode *removeThis = head-&gt;next;
+
+  // looks at first node w/value and deletes
+  while(removeThis-&gt;next != NULL){
+    // make first node w/value point to next one over;
+    head-&gt;next = head-&gt;next-&gt;next;
+    delete removeThis;
+    count--;
+    // point again to first node/w value
+    removeThis = head-&gt;next;
+  }
+
+  // reset pointers on head and tail
+  tail-&gt;previous = head;
+  head-&gt;next = tail;
+  }
+}
+
+
+// Returns an iterator that points to the ListNode in
+// the first position
+ListItr List::first(){
+  ListNode *firstValue = head-&gt;next;
+  ListItr f(firstValue);
+  return f;
+}
+
+// Returns an iterator that points to the ListNode in
+// the last position
+ListItr List::last(){
+  ListNode *lastValue = tail-&gt;previous;
+  ListItr l(lastValue);
+  return l;
+
+}
+
+// Inserts x AFTER current iterator position p
+void List::insertAfter(int x, ListItr position){
+
+  // if iterator is not at dummy tail
+  if(!position.isPastEnd()){
+
+  // create new node
+  ListNode *newGuy = new ListNode();
+  newGuy-&gt;value = x;
+
+  // point newGuy's next to current's last next
+  newGuy-&gt;next = position.current-&gt;next;
+
+  // point newGuy's previous to current node
+  newGuy-&gt;previous = position.current;
+
+  // change current node's next's previous to newGuy
+  position.current-&gt;next-&gt;previous = newGuy;
+
+  // point current node's next to newGuy
+  position.current-&gt;next = newGuy;
+
+  // increases count by 1
+  count++;
+
+  }
+}
+
+// Inserts x BEFORE current iterator position p
+void List::insertBefore(int x, ListItr position){
+
+  // if iterator is not at dummy head
+  if(!position.isPastBeginning()){
+
+  // create new node
+  ListNode *newGuy = new ListNode();
+  newGuy-&gt;value = x;
+
+  // point newGuy's next to current node
+  newGuy-&gt;next = position.current;
+
+  // point newGuy's previous to current node's last previous
+  newGuy-&gt;previous = position.current-&gt;previous;
+
+  // point current node's last previous to point to newGuy
+  position.current-&gt;previous-&gt;next = newGuy;
+
+  // point current node's previous to point to newGuy
+  position.current-&gt;previous = newGuy;
+
+  // increases count by 1
+  count++;
+
+  }
+}
+
+// Insert x at tail of list
+void List::insertAtTail(int x){
+
+  // creates new node and sets val
+  ListNode *newGuy = new ListNode();
+  newGuy-&gt;value = x;
+
+  // point newGuy's next to tail
+  newGuy-&gt;next = tail;
+
+  // point newGuy's previous to tail's previous
+  newGuy-&gt;previous = tail-&gt;previous;
+
+  // point tail's last previous to newGuy
+  tail-&gt;previous-&gt;next = newGuy;
+
+  // point tail's previous to newGuy
+  tail-&gt;previous = newGuy;
+
+  // increases count by 1
+  count++;
+
+}
+
+// Removes the first occurrence of x
+void List::remove(int x){
+  ListItr foundX = find(x);
+
+  // points the surrounding node's of x back at each other
+  foundX.current-&gt;previous-&gt;next = foundX.current-&gt;next;
+  foundX.current-&gt;next-&gt;previous = foundX.current-&gt;previous;
+
+  ListNode *removeThis = foundX.current;
+  delete removeThis;
+
+  // decreases count by 1
+  count--;
+}
+
+// Returns an iterator that points to the first occurrence of x,
+// else return a iterator to the dummy tail node
+ListItr List::find(int x){
+
+  // new iterator to move through list
+  ListItr moving(head);
+
+  // while moving iterator is not at tail
+  while(!moving.isPastEnd()){
+  // if iterator's current value matches our int x
+  if(moving.current-&gt;value == x){
+    // point foundIt iterator to this node
+    return moving;
+  }
+    moving.moveForward();
+  }
+  moving.current = tail;
+  return moving;
+
+}
+
+// Returns the number of elements in the list
+int List::size() const{
+  return count;
+}
+</code></pre>
+
+<br>
+<br><b>ListItr.cpp</b>
+<pre><code class="cpp">#include "ListItr.h"
+#include "List.h"
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Constructor
+ListItr::ListItr(){
+  current = NULL;
+}
+
+// One parameter constructor
+ListItr::ListItr(ListNode* theNode){
+  current = theNode;
+}
+
+// Returns true if past end position in list, else false
+bool ListItr::isPastEnd() const{
+  return current-&gt;next == NULL;
+}
+
+// Returns true if past first position in list, else false
+bool ListItr::isPastBeginning() const{
+  return current-&gt;previous == NULL;
+}
+
+// Advances current to next position in list
+// (unless already past end of list)
+void ListItr::moveForward(){
+  // if iterator's current is a valid pointer
+  // and if current -&gt; previous is a valid pointer
+  // and if not past the end of list
+  if(!isPastEnd() &&
+   current != NULL &&
+   current-&gt;next != NULL){
+  current = current-&gt;next;
+  }
+}
+
+// Moves current back to previous position in list
+// unless already past beginning of list)
+void ListItr::moveBackward(){
+  // if iterator's current is a valid pointer
+  // and if current -&gt; next is a valid pointer
+  // and if not past the beginning of list
+  if(!isPastBeginning() &&
+   current != NULL &&
+   current-&gt;previous != NULL){
+  current = current-&gt;previous;
+  }
+}
+
+// Returns item in current position
+int ListItr::retrieve() const{
+  return current-&gt;value;
+}
+
+
+// printList: non-member function prototype
+void printList(List& source, bool direction){
+
+  // if forward direction, print from head to tail
+  if(direction){
+  ListItr moving = source.first();
+  while (!moving.isPastEnd()) {
+    cout &lt;&lt; moving.retrieve() &lt;&lt; " ";
+    moving.moveForward();
+  }
+  }
+  // backward direction, print from tail to head
+  else {
+  ListItr moving = source.last();
+  while(!moving.isPastBeginning()){
+    cout &lt;&lt; moving.retrieve() &lt;&lt; " ";
+    moving.moveBackward();
+  }
+  }
+}</code></pre>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Stacks Modal -->
+    <div class="modal fade" id="Stacks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 3: Stacks</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab03/index.html">here</a>
+            <br>
+<br>
+<b>stack.cpp</b>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;string&gt;
+#include "stack.h"
+
+using namespace std;
+
+// constructor
+stack::stack(){
+  count = 0;
+  head = NULL;
+}
+
+// destructor
+stack::~stack(){
+  // calls pop until list is empty
+  while(count != 0){
+    this-&gt;pop();
+  }
+}
+
+// inserts stackNode at top of stack
+void stack::push(int e){
+  stackNode* newNode = new stackNode();
+  newNode-&gt;value = e;
+  newNode-&gt;next = NULL;
+
+  if(count != 0){
+  // points newNode's next to original head
+  newNode-&gt;next = head;
+  }
+  newNode-&gt;next = NULL;
+
+  // points first pointer to new node
+  head = newNode;
+
+  // updates count
+  count++;
+}
+
+// top
+int stack::top(){
+  return head-&gt;value;
+}
+
+// removes first node on stack
+void stack::pop(){
+  stackNode* temp = head-&gt;next;
+  stackNode* removeThis = head;;
+  delete removeThis;
+  count--;
+  head = temp;
+}
+
+// empty
+bool stack::empty(){
+  return count == 0;
+}</pre></code>
+
+<br>
+<br>
+<b>postfixCalculator.cpp</b>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;string&gt;
+#include "stack.h"
+#include "postfixCalculator.h"
+
+using namespace std;
+
+// constructor
+postfixCalculator::postfixCalculator(){
+
+}
+
+// destructor
+postfixCalculator::~postfixCalculator(){
+  // calls make Empty which calls pop
+  // pop deletes the actual nodes from memory
+  makeEmpty();
+}
+
+// adds passed int to top of stack
+void postfixCalculator::pushNum(int e){
+  theStack.push(e);
+}
+
+// returns int on top of stack
+int postfixCalculator::getTop(){
+  if(theStack.empty()){
+    cout &lt;&lt; "The stack is empty !" &lt;&lt; endl;
+    exit(-1);
+  }
+  return theStack.top();
+}
+
+// removes the first int off the stack
+void postfixCalculator::popNum(){
+  if(theStack.empty()){
+    cout &lt;&lt; "The stack is empty !" &lt;&lt; endl;
+    exit(-1);
+  }
+  theStack.pop();
+}
+
+// are any elements left in the stack (false) or not (true)
+bool postfixCalculator::isEmpty(){
+  return theStack.empty();
+}
+
+// negates int
+void postfixCalculator::negate(){
+  // read top
+  int negating = this-&gt;getTop();
+
+  // pop the top
+  this-&gt;popNum();
+
+  // calculation
+  negating = negating * -1;
+
+  // push in
+  this-&gt;pushNum(negating);
+
+}
+
+// adds ints
+void postfixCalculator::add(){
+  // read two ints and pop off
+  int num1 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  int num2 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  // calculation
+  int result = num1 + num2;
+
+  // push in
+  this-&gt;pushNum(result);
+
+}
+
+
+// subtracts ints
+void postfixCalculator::subtract(){
+  // read two ints and pop off
+  int num2 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  int num1 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  // calculation
+  int result = num1 - num2;
+
+  // push in
+  this-&gt;pushNum(result);
+}
+
+// multiplies ints
+void postfixCalculator::multiply(){
+  // read two ints and pop off
+  int num1 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  int num2 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  // calculation
+  int result = num1 * num2;
+
+  // push in
+  this-&gt;pushNum(result);
+}
+
+// divides ints
+void postfixCalculator::divide(){
+  // read two ints and pop off
+  int num2 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  int num1 = this-&gt;getTop();
+  this-&gt;popNum();
+
+  // calculation
+  int result = num1 / num2;
+
+  // push in
+  this-&gt;pushNum(result);
+}
+
+// clears the stack
+void postfixCalculator::makeEmpty(){
+  while(!this-&gt;isEmpty()){
+    this-&gt;popNum();
+  }
+}
+
+// gets tokens
+void postfixCalculator::prompt(){
+  cout &lt;&lt; "Enter expression: ";
+  string expr;
+
+  while (cin &gt;&gt; expr){
+    if(cin.eof()){
+      break;
+    }
+
+    // int-afy
+    int num;
+    if(stringToInt(expr,num)){
+      this-&gt;pushNum(num);
+    }
+
+    // if operand
+    if(!stringToInt(expr,num)){
+      if(expr.compare("~")==0){
+    this-&gt;negate();
+      } if (expr.compare("+")==0){
+    this-&gt;add();
+      } if (expr.compare("-")==0){
+    this-&gt;subtract();
+      } if (expr.compare("*")==0){
+    this-&gt;multiply();
+      } if (expr.compare("/")==0){
+      this-&gt;divide();
+      }
+    }
+  }
+
+  // print out answer
+  cout &lt;&lt; "[result]: " &lt;&lt; this-&gt;getTop() &lt;&lt; endl;
+  exit(-1);
+}
+
+// converts int to string using istringstream
+bool postfixCalculator::stringToInt(const string &expr, int &i){
+   istringstream myStream(expr);
+   if(myStream&gt;&gt;i){
+     return true;
+   }
+   return false;
+}</code></pre>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Number Representation -->
+    <div class="modal fade" id="NumberRep" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 4: Number Representation</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab04/index.html">here</a>
+            <br>
+            <br><b>Floating Point Conversion doc: </b> <a href="https://docs.google.com/document/d/1VIsXCqsuALT_MwsoIw-cUzJfl6eFg4mgEtU-Qdn5S4Y/edit?usp=sharing">here</a>
+            <br><b>Size of C++ Data Types, Primitive Arrays in C++ doc: </b> <a href="https://docs.google.com/document/d/1AgVLsth-a509J-Wm7j-NPoJWUafehe2fixpSP_UGPaw/edit?usp=sharing">here</a>           <br>
+<br>
+<b>Snippet from prelab4.cpp</b>
+<pre><code class="cpp">/**
+ **  overflow:
+ **  answers questions in "The Limits of Representation"
+ **  section : What happens when you add 1 to an
+ **  unsigned int variable containing the maximum
+ **  value of an unsigned int ?
+ **/
+void overflow(){
+  unsigned int toOverflow = numeric_limits<unsigned int>::max();
+  cout << "unsigned int:\t" << toOverflow << endl;
+  cout << "adding one  :\t" << toOverflow << " + 1 = " << toOverflow + 1 << endl;
+  cout << "Why does this happen?: " << endl;
+  cout << "When a variable is assigned the highest value possible," << endl;
+  cout << "its bit pattern is composed of ones across the board. " << endl;
+  cout << "Add 1 to that and the result will be zero, carry one" << endl;
+  cout << "zero, carry one, so on and so forth till the end." << endl;
+  cout << "However, the highest bit with the 1, will be discarded." << endl;
+  cout << "Only the zeros remain, resulting in the number 0." << endl;
+}
+</code></pre>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Trees Modal -->
+    <div class="modal fade" id="Trees" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 5: Trees</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab05/index.html">here</a>
+            <br>
+            <br>
+<b>Pizza makefile</b>
+<pre><code class="makefile"># Makefile for CS 2150 in-lab 5
+# Defines the C++ compiler we'll be using
+CXX = clang++
+
+# Defines the flags we'll be passing to the C++ compiler
+CXXFLAGS    = -Wall -g
+
+# All of the .o files for our program
+OFILES  = avltree.o binarysearchtree.o tree_test.o
+
+# This tells make to create a .o file from a .cpp file, using the
+# defaults above (i.e. the CXX and CXXFLAGS macros)
+.SUFFIXES: .o .cpp
+
+# How to compile our final program.  Note that we do NOT specify an
+# output executable name -- in order for this to work with the grading
+# system, the file needs to be a.out (a.exe in Cygwin).
+main:   $(OFILES)
+    $(CXX) $(OFILES)
+
+# This will clean up (remove) all our object files.  The -f option
+# tells rm to forcily remove the files (i.e. don't ask if they should
+# be removed or not).  This removes object files (*.o) and Emacs
+# backup files (*~)
+clean:
+    /bin/rm -f *.o *~
+
+# The following lines define the dependencies for this lab.  For
+# example, if avltree.h is modified, then make knows to re-compile
+# avltree.o and tree_test.o (and the final executable).  These lines
+# are generated through the command 'clang++ -MM *.cpp', and that output
+# is pasted below.
+avltree.o: avltree.cpp avltree.h avlnode.h
+binarysearchtree.o: binarysearchtree.cpp binarysearchtree.h binarynode.h
+tree_test.o: tree_test.cpp binarysearchtree.h binarynode.h avltree.h \
+  avlnode.h</code></pre>
+
+            <br>
+            <br>
+<b>TreeCalc.cpp</b>
+<pre><code class="cpp">#include "TreeCalc.h"
+#include &lt;iostream&gt;
+#include &lt;cstdlib&gt;
+
+using namespace std;
+
+//Constructor
+TreeCalc::TreeCalc() {
+   count = 0;
+}
+
+//Destructor- frees memory
+TreeCalc::~TreeCalc() {
+  if(mystack.size() != 0){
+    cleanTree(mystack.top());
+    mystack.pop();
+  }
+}
+
+//Deletes tree/frees memory
+void TreeCalc::cleanTree(TreeNode* ptr) {
+  // if tree not empty
+  if(ptr != NULL){
+    // if at leaf, delete
+    if(ptr-&gt;left==NULL && ptr-&gt;right==NULL){
+      delete ptr;
+      count--;
+    } else {
+      cleanTree(ptr-&gt;left);
+      cleanTree(ptr-&gt;right);
+    }
+  }
+}
+
+//Gets data from user
+void TreeCalc::readInput() {
+    string response;
+    cout &lt;&lt; "Enter elements one by one in postfix notation" &lt;&lt; endl
+         &lt;&lt; "Any non-numeric or non-operator character,"
+         &lt;&lt; " e.g. #, will terminate input" &lt;&lt; endl;
+    cout &lt;&lt; "Enter first element: ";
+    cin &gt;&gt; response;
+    //while input is legal
+    while (isdigit(response[0]) || response[0]=='/' || response[0]=='*'
+            || response[0]=='-' || response[0]=='+' ) {
+        insert(response);
+        cout &lt;&lt; "Enter next element: ";
+        cin &gt;&gt; response;
+    }
+}
+
+//Puts value in tree stack
+void TreeCalc::insert(const string& val) {
+TreeNode *newGuy = new TreeNode(val);
+  // if operator, assign operator nodes left and right
+  // to last two elements in the stack
+  if(val=="/" || val=="*" || val=="-" || val=="+"){
+    newGuy-&gt;right = mystack.top();
+    mystack.pop();
+
+    newGuy-&gt;left = mystack.top();
+    mystack.pop();
+  }
+  // else, just push val into the stack
+  mystack.push(newGuy);
+  count++;
+}
+
+//Prints data in prefix form
+void TreeCalc::printPrefix(TreeNode* ptr) const {
+  // if tree not empty
+  if(ptr != NULL){
+    cout &lt;&lt; ptr-&gt;value &lt;&lt; " ";
+    printPrefix(ptr-&gt;left);
+    printPostfix(ptr-&gt;right);
+  }
+}
+
+//Prints data in infix form
+void TreeCalc::printInfix(TreeNode* ptr) const {
+  // if tree not empty
+  if(ptr != NULL){
+    // if operator, print open parenthesis
+    if(ptr-&gt;value=="/" || ptr-&gt;value=="*"
+       || ptr-&gt;value=="-" || ptr-&gt;value=="+"){
+      cout &lt;&lt; "(";
+    }
+    // left tree subtree
+    printInfix(ptr-&gt;left);
+
+    // if token is operator, spaces each side, else none
+    if(ptr-&gt;value=="/" || ptr-&gt;value=="*"
+       || ptr-&gt;value=="-" || ptr-&gt;value=="+"){
+      cout &lt;&lt; " " &lt;&lt; ptr-&gt;value &lt;&lt; " ";
+    } else {
+    cout &lt;&lt; ptr-&gt;value;
+    }
+    // right tree subtree
+    printInfix(ptr-&gt;right);
+
+    //if operator, print close parenthesis
+    if(ptr-&gt;value=="/" || ptr-&gt;value=="*"
+       || ptr-&gt;value=="-" || ptr-&gt;value=="+"){
+      cout &lt;&lt; ")";
+    }
+  }
+}
+
+//Prints data in postfix form
+void TreeCalc::printPostfix(TreeNode* ptr) const {
+  // if tree not empty
+  if(ptr != NULL){
+    printPostfix(ptr-&gt;left);
+    printPostfix(ptr-&gt;right);
+    cout &lt;&lt; ptr-&gt;value &lt;&lt; " ";
+  }
+}
+
+// Prints tree in all 3 (pre,in,post) forms
+void TreeCalc::printOutput() const {
+  if (mystack.size()!=0 && mystack.top()!=NULL) {
+    cout &lt;&lt; "Expression tree in postfix expression: ";
+    printPostfix(mystack.top());
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Expression tree in infix expression: ";
+    printInfix(mystack.top());
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Expression tree in prefix expression: ";
+    printPrefix(mystack.top());
+    cout &lt;&lt; endl;
+  } else
+    cout&lt;&lt; "Size is " &lt;&lt; count &lt;&lt; "." &lt;&lt; endl;
+}
+
+// Evaluates tree, returns value
+// private calculate() method
+int TreeCalc::calculate(TreeNode* ptr) const {
+  // if pointing to operator, calc with l and r children
+  if(ptr-&gt;value=="/" || ptr-&gt;value=="*"
+     || ptr-&gt;value=="-" || ptr-&gt;value=="+"){
+    if(ptr-&gt;value=="/"){
+      return calculate(ptr-&gt;left) / calculate(ptr-&gt;right);
+    }
+    if(ptr-&gt;value=="*"){
+      return calculate(ptr-&gt;left) * calculate(ptr-&gt;right);
+    }
+    if(ptr-&gt;value=="-"){
+      return calculate(ptr-&gt;left) - calculate(ptr-&gt;right);
+    }
+    if(ptr-&gt;value=="+"){
+      return calculate(ptr-&gt;left) + calculate(ptr-&gt;right);
+    }
+  }
+  // if not operator, convert string to int
+  int a = atoi(ptr-&gt;value.c_str());
+  return a;
+}
+
+// Calls calculate, sets the stack back to a blank stack
+// public calculate() method. Hides private data from user
+int TreeCalc::calculate() {
+  int i = calculate(mystack.top());
+  cleanTree(mystack.top());
+  while(!mystack.empty()){
+    mystack.pop();
+  }
+  return i;
+}</code></pre>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Hashing Modal -->
+    <div class="modal fade" id="Hashing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 6: Hashing</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab06/index.html">here</a>
+            <br>Some of the methods are provided by the instructor and are marked with his name.
+            <br>The precomputed powers of 11 were obtained by writing a recursive power method in a cpp file and outputting the results to a txt file for ease of copying.
+            <br>
+            <br>
+<b>hashTable.cpp</b>
+<pre><code class="cpp">#include "hashTable.h"
+
+using namespace std;
+
+// precomputed powers of 11
+unsigned int eleven[127] ={1, 11, 121, 1331, 14641, 161051, 1771561, 19487171, 214358881, 2357947691, 167620825, 1843829075, 3102250641, 4059985979, 1710172809, 1632031715, 772479681, 4202309195, 3275728185, 1673271667, 1226119153, 602408795, 2331529449, 4171987459, 2942189089, 2299308907, 3817561497, 3338470803, 2363440465, 228041339, 2508454729, 1823198243, 2875311489, 1563655307, 20339193, 223731123, 2461042353, 1301662107, 1433381289, 2882292291, 1640444129, 865016235, 925243993, 1587749331, 285373457, 3139108027, 170449929, 1874949219, 3444572225, 3530556107, 181411513, 1995526643, 475956593, 940555227, 1756172905, 2138032771, 2043524001, 1003927531, 2453268249, 1216146963, 492714705, 1124894459, 3783904457, 2968243363, 2585905921, 2675161355, 3656971129, 1571976755, 111875121, 1230626331, 651987753, 2876897987, 1581106785, 212305451, 2335359961, 4214123091, 3405681041, 3102753083, 4065512841, 1770968291, 2300782017, 3833765707, 3516717113, 29182579, 321008369, 3531092059, 187306985, 2060376835, 1189308705, 197493867, 2172432537, 2421921427, 871331921, 994716539, 2351947337, 101616931, 1117786241, 3705714059, 2108148985, 1714802355, 1682956721, 1332654747, 1774300329, 2337434435, 4236942305, 3656692395, 1568910681, 78148307, 859631377, 866010555, 936181513, 1708062051, 1608813377, 517077963, 1392890297, 2436891379, 1036001393, 2806080731, 802116969, 233352067, 2566872737, 2465796331, 1353955865, 2008612627, 619902417, 2523959291, 1993748425};
+
+// constructor pass size
+hashTable::hashTable(int s){
+
+ theHash = new vector&lt;list&lt;string&gt; &gt;;
+
+ size = getNextPrime(s * 4);
+
+  // uses vector resize function
+  theHash-&gt;resize(size);
+
+  // initialize each of the values within the
+  // vector to a list
+  for (int i = 0; i &lt; size; i++){
+    list&lt;string&gt; ls;
+    theHash-&gt;push_back(ls);
+  }
+}
+
+// destructor
+hashTable::~hashTable(){
+  delete theHash;
+}
+
+unsigned int hashTable::hashFunction(const string &s) const{
+  unsigned int hash = 0;
+  for (int i = 0; i &lt; s.length(); i++){
+    //hash += s[i];
+    hash += (s[i] * eleven[(int)s[i]]);
+  }
+  return hash % this-&gt;size;
+}
+
+
+// find function
+bool hashTable::found(const string &s){
+
+  // locates list using hash function
+  list&lt;string&gt; &l = theHash-&gt;at(hashFunction(s));
+
+  // at the list we found, run through
+  for(list&lt;string&gt;::iterator it = l.begin(); it!= l.end(); ++it){
+    if(*it == s) {
+      return true;
+    }
+  }
+  return false;
+
+}
+
+// insert function
+void hashTable::insert(const string &s){
+  // if not duplicate and length greater than 3,
+  if (!(this-&gt;found(s)) && !(s.length() &lt; 3)){
+    list&lt;string&gt; &l = theHash-&gt;at(hashFunction(s));
+    l.push_back(s);
+    //cout &lt;&lt; s &lt;&lt; endl;
+  }
+}
+
+
+bool hashTable::checkprime(unsigned int p) {
+// Prime number generation code
+// written by Aaron Bloomfield, 2014
+    if ( p &lt;= 1 ) // 0 and 1 are not primes; the are both special cases
+        return false;
+    if ( p == 2 ) // 2 is prime
+        return true;
+    if ( p % 2 == 0 ) // even numbers other than 2 are not prime
+        return false;
+    for ( int i = 3; i*i &lt;= p; i += 2 ) // only go up to the sqrt of p
+        if ( p % i == 0 )
+            return false;
+    return true;
+}
+
+
+int hashTable::getNextPrime (unsigned int n) {
+// Prime number generation code
+// written by Aaron Bloomfield, 2014
+    while ( !checkprime(++n) );
+    return n; // all your primes are belong to us
+}
+</code></pre>
+
+
+<br>
+<br>
+
+<b>WordPuzzle.cpp</b>
+<pre><code class="cpp">#include "hashTable.h"
+#include "timer.h"
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+
+using namespace std;
+
+// forward declarations
+bool readInTable (string filename, int &rows, int &cols);
+char* getWordInTable (int startRow, int startCol, int dir, int len,
+            int numRows, int numCols);
+
+// variables
+// for printing purposes in TIMER section
+   timer t;
+   int wordsFound = 0;
+   string direction;
+// to hold num rows and cols in input file for GRID PASS section
+   int rows, cols;
+
+int main(int argc, char *argv[]){
+
+  // reject if too few or too many args passed
+  if(argc &lt; 3 || argc &gt; 3){
+  cerr &lt;< "Please pass in two arguments." &lt;< endl;
+  cerr &lt;< "format: ./a.out &lt;dictionary_file&gt; &lt;grid_file&gt;" &lt;< endl;
+  return 0;
+  }
+
+  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  // FIRST DICTIONARY PASS :
+  string line;
+  ifstream file(argv[1]);
+
+  // if unable to open file, error
+  if (!file.is_open()){
+  cerr &lt;< "Unable to open the dictionary file :(" &lt;< endl;
+  return 1;
+  } // else,
+
+  // count number of lines
+  int lines = 0;
+
+  while(getline(file, line)){
+  ++lines;
+  }
+  file.close();
+
+  // creates hash table w/size based on dictionary
+  hashTable *hashy = new hashTable(lines);
+
+  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  // SECOND DICTIONARY PASS :
+  string word;
+  file.open(argv[1]);
+
+  // inserts each word into the hash table
+  while(file.good()){
+  getline(file, word);
+  if (word.length() &gt; 2){
+    hashy-&gt;insert(word);
+  }
+  }
+  file.close();
+
+  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+  // GRID PASS :
+  bool result = readInTable(argv[2], rows, cols);
+  // attempt to read in file
+  if (!result){
+  cerr &lt;< "Error reading in file!" &lt;< endl;
+  exit(1);
+  }
+
+  // ***************************************************************
+  // START TIMER :
+  t.start();
+
+  /*
+  from lab manual :
+     A string of letters from the grid will depend on four values:
+     The x value of the starting letter
+     The y value of the starting letter
+     The direciton, d, of the word
+     The length, l, of the string
+  */
+
+  for(int row = 0; row &lt; rows; row++){
+  for(int col = 0; col &lt; cols; col++){
+    for(int dir = 0; dir &lt; 8; dir++){
+  for(int len = 3; len &lt; 22 ; len++){
+    string current = getWordInTable(row, col, dir, len, rows, cols);
+    //cout &lt;< "current: " &lt;< current &lt;< " len: " &lt;< len &lt;< endl;
+
+    // sets value of direction for printing purposes
+    if(dir == 0) {
+    direction = "N";
+    } else if (dir == 1) {
+    direction = "NE";
+    } else if (dir == 2) {
+    direction = "E";
+    } else if (dir == 3){
+    direction = "SE";
+    } else if (dir == 4){
+    direction = "S";
+    } else if (dir == 5){
+    direction = "SW";
+    } else if (dir == 6){
+    direction = "W";
+    } else {
+    direction = "NW";
+    }
+
+    if (hashy-&gt;found(current) && len == current.length()){
+    //cout &lt;&lt; "I'm inside the found loop!" &lt;&lt; endl;
+    wordsFound++;
+    cout &lt;&lt; "" &lt;&lt; direction &lt;&lt; "\t(" &lt;&lt; row &lt;&lt; ", " &lt;&lt; col &lt;&lt; "): \t" &lt;&lt; current &lt;&lt; endl;
+    }
+  }
+    }
+  }
+  }
+
+  // END TIMER
+  t.stop();
+ // ***************************************************************
+
+  // displays results
+  cout &lt;&lt; wordsFound &lt;&lt; " words found." &lt;&lt; endl;
+  double time = t.getTime();
+  cout &lt;&lt; "Found all words in " &lt;&lt; time &lt;&lt; " seconds." &lt;&lt; endl;
+  return 0;
+}
+
+/*
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * code below: Aaron Bloomfield, 2008
+ */
+
+// We create a 2-D array of some big size, and assume that the table
+// read in will be less than this size (a valid assumption for lab 6)
+#define MAXROWS 500
+#define MAXCOLS 500
+char table[MAXROWS][MAXCOLS];
+
+// Forward declarations
+bool readInTable (string filename, int &rows, int &cols);
+char* getWordInTable (int startRow, int startCol, int dir, int len,
+            int numRows, int numCols);
+
+
+
+/* The main() function shows how to call both the readInTable()
+ * function as well as the getWordInTable() function.
+ *
+ * This function will read in a grid file, as per the format in the
+ * CS 2150 lab 6 document, into a global table[][] array.It uses C++
+ * file streams, and thus requires the the &lt;fstream&gt; #include header.
+ *
+ * @return true or false, depending on whether the file was
+ *     successfully opened.
+ * @param filename The file name to read in -- it's assumed to be in
+ *         the file format described in the lab document.
+ * @param rows The number of rows as specified in the input file;
+ *       as this is a reference, it is set by the function.
+ * @param cols The number of columnss as specified in the input file;
+ *       as this is a reference, it is set by the function.
+ */
+bool readInTable (string filename, int &rows, int &cols) {
+  // a C++ string to hold the line of data that is read in
+  string line;
+  // set up the file stream to read in the file (takes in a C-style
+  // char* string, not a C++ string object)
+  ifstream file(filename.c_str());
+  // upon an error, return false
+  if ( !file.is_open() )
+    return false;
+  // the first line is the number of rows: read it in
+  file &gt;&gt; rows;
+  cout &lt;&lt; "There are " &lt;&lt; rows &lt;&lt; " rows." &lt;&lt; endl;
+  getline (file,line); // eats up the return at the end of the line
+  // the second line is the number of cols: read it in and parse it
+  file &gt;&gt; cols;
+  cout &lt;&lt; "There are " &lt;&lt; cols &lt;&lt; " cols." &lt;&lt; endl;
+  getline (file,line); // eats up the return at the end of the line
+  // the third and last line is the data: read it in
+  getline (file,line);
+  // close the file
+  file.close();
+  // convert the string read in to the 2-D grid format into the
+  // table[][] array.In the process, we'll print the table to the
+  // screen as well.
+  int pos = 0; // the current position in the input data
+  for ( int r = 0; r &lt; rows; r++ ) {
+    for ( int c = 0; c &lt; cols; c++ ) {
+      table[r][c] = line[pos++];
+      cout &lt;&lt; table[r][c];
+    }
+    cout &lt;&lt; endl;
+  }
+  // return success!
+  return true;
+}
+
+
+
+/** This function will retrieve a word in a grid of letters in a given
+ * direction.If the end of the grid is encountered before the length
+ * of the desired string is reached, then a shorter string will be
+ * returned.The data is retrieved from a global char table[][]
+ * array, which is assumed to be defined (and in scope).NOTE: The
+ * return value is a static char[][] variable (for efficiency
+ * reasons), so a successive return value will overwrite a previous
+ * return value.
+ *
+ * @return A char* containing the letters in the provided direction
+ *     (NOTE: it is returned in a static char array).
+ * @param startRow The starting (row,col) position to find the word.
+ * @param startCol The starting (row,col) position to find the word.
+ * @param dir The direction to move: 0 is north (upwards), 1 is
+ *      northeast, and it rotates around clockwise until it
+ *      reaches 7 for northwest.
+ * @param len The length of the string to return (assuming the edge of
+ *      the grid is not reached).
+ * @param numRows The number of rows in the global char table[][]
+ *        array .
+ * @param numCols The number of columns in the global char table[][]
+ *        array.
+ */
+char* getWordInTable (int startRow, int startCol, int dir, int len,
+            int numRows, int numCols) {
+  // the static-ness of this variable prevents it from being
+  // re-declared upon each function invocataion.It also prevents it
+  // from being deallocated between invocations.It's probably not
+  // good programming practice, but it's an efficient means to return
+  // a value.
+  static char output[256];
+  // make sure the length is not greater than the array size.
+  if ( len &gt;= 255 )
+    len = 255;
+  // the position in the output array, the current row, and the
+  // current column
+  int pos = 0, r = startRow, c = startCol;
+  // iterate once for each character in the output
+  for ( int i = 0; i &lt; len; i++ ) {
+    // if the current row or column is out of bounds, then break
+    if ( (c &gt;= numCols) || (r &gt;= numRows) || (r &lt; 0) || (c &lt; 0) )
+      break;
+    // set the next character in the output array to the next letter
+    // in the table
+    output[pos++] = table[r][c];
+    // move in the direction specified by the parameter
+    switch (dir) { // assumes table[0][0] is in the upper-left
+      case 0:
+        r--;
+        break; // north
+      case 1:
+        r--;
+        c++;
+        break; // north-east
+      case 2:
+        c++;
+        break; // east
+      case 3:
+        r++;
+        c++;
+        break; // south-east
+      case 4:
+        r++;
+        break; // south
+      case 5:
+        r++;
+        c--;
+        break; // south-west
+      case 6:
+        c--;
+        break; // west
+      case 7:
+        r--;
+        c--;
+        break; // north-west
+    }
+  }
+  // set the next character to zero (end-of-string)
+  output[pos] = 0;
+  // return the string (a C-style char* string, not a C++ string
+  // object)
+  return output;</code></pre>
+            <br>
+            <br>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Machine Language Modal -->
+    <div class="modal fade" id="Machine" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 7: Machine Language</h4>
+          </div>
+          <div class="modal-body">
+            <br>Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab07/index.html">here</a>
+            <br>
+            <br>
+            IBCM was developed at UVA a long time ago to give students an introduction to machine language.
+            <br>I enjoyed this unit, mostly because I thought the blur between data and executable
+            <br>program code was really cool.
+            <br>
+            <br>
+<b>quine.ibcm</b>
+<pre><code class="nohighlight">C005 000            jmp      start       skip the variables
+0001 001 one        dw        1
+0000 002 zero       dw        0
+0014 003 lines      dw        14
+3000 004 loader     dw        3000
+3003 005 start      load      lines
+6014 006            sub cur
+D011 007            jmpe      xit        if ( cur > lines ) goto xit
+3004 008            load      loader
+5014 009            add cur
+400B 00A            store     doit
+300B 00B doit
+1800 00C            print     line
+3014 00D            load      cur         update current line
+5001 00E            add       one
+4014 00F            store     cur
+C005 010            jmp       start
+3014 011 xit        load      cur
+4002 012            store     zero
+0000 014 cur/halt   dw        0
+</code></pre>
+            <br>
+            <br>
+
+<b>averagetime.sh</b>
+<pre><code class="bash">#!/bin/bash
+#!/bin/bash
+echo -n "enter the exponent for counter.cpp: "
+read input
+if [[ "$input" == "quit" ]] ; then
+    echo "exiting script"
+    exit 0
+fi
+(( total_time = 0 ))
+for i in {1..5} ; do
+    echo "Running iteration $i..."
+    time=`./a.out $input | tail -1`
+    echo "time taken: $time ms"
+    (( total_time += $time ))
+done
+echo "5 iterations took $total_time ms"
+echo "Average time was $(( total_time/5 )) ms"</code></pre>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Assembly Language 1 Modal -->
+    <div class="modal fade" id="Assembly1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 8: Assembly Language Part 1</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab08/index.html">here</a>
+            <br>
+            <br>
+
+<b>mathlib.s</b>
+<pre><code class="x86asm">global product
+global power
+
+section .text
+
+;
+; product
+; parameter 1 - int x passed in
+; parameter 2 - int y passed in
+; return value - product of ( x * y )
+;
+
+product:
+    ; *** subroutine prologue ***
+    push ebp        ; Save old base pointer value
+    mov ebp, esp        ; set the new base pointer value
+    push edi        ; save the values of the registers that the function
+    push esi        ; will modify
+
+    xor eax, eax        ; place zero in EAX to keep running iterative sum
+
+    ; *** subroutine body ***
+
+    mov esi, [ebp+8]    ; put value of parameter 1 into ESI
+    mov edi, [ebp+12]   ; put value of parameter 2 into EDI
+
+add:    add eax, esi        ; add first parameter to current sum
+    dec edi         ; b--
+    jne add         ; if second parameter != 0, keep adding fist param to sum of first param
+
+
+    ; *** subroutine epilogue ***
+
+    pop esi         ; recover register values
+    pop edi
+    mov esp, ebp        ; deallocate local variables ( none here though )
+    pop ebp         ; restore the caller's base pointer value
+    ret
+
+power:
+        ; *** subroutine prologue ***
+    push ebp        ; Save old base pointer value
+    mov ebp, esp        ; set the new base pointer value
+    sub esp, 8      ; make room two 4-byte local variables
+    push edi        ; save the values of the registers that the function will modify
+    push esi        ;
+
+    ; *** subroutine body ***
+
+    mov esi, [ebp+8]    ; base into esi
+    mov edi, [ebp+12]   ; exponent into edi
+
+    cmp edi, 0      ; if ( b > 0 ) (and not == 0 ) then proceed w/pow
+    jg bmore
+    mov eax, 1      ; gives return val of 1
+    jmp epi
+
+bmore:  dec edi         ; b - 1
+    push edi        ; push exponent
+    push esi        ; push base
+    call power      ; recurse (calls power)
+    pop esi         ; pop base
+    push esi        ; push base
+    push eax        ; push value currently comp
+    call product        ; calls product routine written above
+
+    ; *** subroutine epilogue ***
+epi:    pop esi         ; recover register values
+    pop edi
+    mov esp, ebp        ; deallocate local variables
+    pop ebp         ; restore the caller's base pointer value
+    ret</code></pre>
+<br>
+<br>
+<b>mathfun.cpp</b>
+<pre><code class="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+extern "C" int product(int, int);
+extern "C" int power(int, int);
+
+
+int main(){
+
+  int x;
+  int y;
+
+  cout &lt;&lt; "Enter integer one: " &lt;&lt; endl;
+  cin &gt;&gt; x;
+  cout &lt;&lt; "Enter integer two: " &lt;&lt; endl;
+  cin &gt;&gt; y;
+  cout &lt;&lt; "The product of " &lt;&lt; x &lt;&lt; " and " &lt;&lt; y &lt;&lt; ": " &lt;&lt; product(x,y) &lt;&lt; endl;
+  cout &lt;&lt; x &lt;&lt; " raised to the power of " &lt;&lt; y &lt;&lt; ": " &lt;&lt; power(x,y) &lt;&lt; endl;
+
+
+  return 0;
+}</code></pre>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Assembly Language 2 Modal -->
+    <div class="modal fade" id="Assembly2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 9: Assembly Language Part 2</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab09/index.html">here</a>
+<br>
+<br>
+
+            <b>threeplusone.s</b>
+            <pre><code class="x86asm">global threexplusone
+
+            section .text
+;
+; optimizations used:
+;   - replaced imul with lea
+;   - replace idiv with shr (bitshift)
+;   - removed two jump labels by moving code around
+;   - replaced a mov instruction with a bitwise xor
+;
+; threexplusone
+; parameter 1 - int x passed in
+; return value - steps it takes to get x = 1 using method below:
+;    if x is even : divide by 2
+;    if x is odd : multiply by 3 and add 1
+;
+
+threexplusone:
+    ;;
+    ;; int threexplusone(int x){
+    ;;    if(x == 1)
+    ;;    return 0;
+    ;;    else if (x % 2 == 0)
+    ;;    x = x/2;
+    ;;    return 1 + threexplusone(x);
+    ;;    else
+    ;;    x = (3 * x) + 1;
+    ;;    return 1 + threexplusone(x);
+    ;;
+
+    ; *** standard subroutine prologue ***
+
+    push ebp        ; save the old base pointer value
+    mov ebp, esp        ; set the new base pointer value
+    push edi        ; save reg
+    push esi        ; save reg
+
+    ; *** subroutine body ***
+
+    xor eax, eax        ; ret val = 0
+    mov edi, [ebp+8]    ; put val of parameter into edi
+    cmp edi, 1      ; check for base case
+    je epil         ; if(x == 1) jump to epilogue, otherwise:
+    shr edi, 1      ; bit shift R : divide by 2
+    jnc even        ; check carry flag and jump if necess.
+    mov edi, [ebp+8]    ; reset edi with x again
+    mov esi, [ebp+8]    ; put x into esi too
+    lea edi, [esi*3]    ; x = (x * 3)
+    inc edi         ; + 1
+    push edi        ; save the new x to be called
+    call threexplusone  ; call function recursively
+    inc eax         ; ret val++
+    jmp epil        ; jump to epilogue
+even:
+    mov edi, [ebp+8]    ; reset edi with x again
+    shr edi, 1      ; bit shift R : divide by 2
+    push edi        ; reset edi
+    call threexplusone  ; call function recursively
+    inc eax         ; ret val++
+    jmp epil        ; jump to epilogue
+
+    ; *** standard subroutine epilogue ***
+epil:
+    mov esp, ebp
+    pop ebp         ; restore the caller's base pointer value
+    ret</code></pre>
+      <br>
+      <br>
+<b>threexinput.cpp</b>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;cstdio&gt; // for printf
+#include "timer.h"
+
+using namespace std;
+timer t;
+
+extern "C" int threexplusone(int x);
+
+int main(){
+  int x;
+  int n;
+
+  cout &lt;&lt; "x &lt;&lt; ";
+  cin &gt;&gt; x;
+  cout &lt;&lt; "n &lt;&lt; ";
+  cin &gt;&gt; n;
+  cout &lt;&lt; endl;
+
+  /*** START TIMER *****/
+  t.start();
+  for(int i = 0; i &lt; n; i++){
+    threexplusone(x);
+  }
+  t.stop();
+  /*** END TIMER *******/
+
+  float time = t.getTime();
+  cout &lt;&lt; "average time to run: ";
+  printf("%.12f", time);
+  cout &lt;&lt; " seconds." &lt;&lt; endl;
+  cout &lt;&lt; "steps taken: " &lt;&lt; threexplusone(x) &lt;&lt; endl;
+  cout &lt;&lt; endl;
+  return 0;
+}</code></pre>
+<br>
+<br>
+<b>linkedlist.c</b>
+<pre><code class="c">#include &lt;stdlib.h>
+#include &lt;stdio.h>
+
+struct node {
+  int x;
+  struct node *next;
+};
+
+int main(){
+
+  int values;
+  printf("Enter how many values to input: ");
+  scanf("%d", &values);
+
+
+  struct node *cur;
+  int i;
+
+  for(i = 1; i &lt; values+1; i++){
+  int val;
+    printf("Enter value %d: ", i);
+    scanf("%d: \n", &val);
+
+    struct node *n;
+    n = malloc(sizeof (struct node));
+    n->x = val;
+    n->next = cur;
+    cur = n;
+    }
+
+  int j;
+
+
+  for (j = 0; j &lt; values; j++){
+    int pr = cur->x;
+    printf("%d\n", pr);
+    cur = cur->next;
+  }
+
+  return 0;
+}
+</code></pre>
+
+          </div>
+          <div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Huffman Coding Modal -->
+    <div class="modal fade" id="Huffman" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 10: Huffman Coding</h4>
+          </div>
+          <div class="modal-body">
+            Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab10/index.html">here</a>
+            <br>
+            <br>
+<b>huffmanenc.cpp</b>
+<pre><code class="cpp">#include &lt;time.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;algorithm&gt;
+#include "heap.h"
+
+// the heap
+heap bh;
+
+// other
+double bitsCompressedFile;
+
+
+int main(int argc, char **argv) {
+  // verify correct num of parameters
+  if (argc != 2){
+    cerr &lt;&lt; "Must supply input file name as one and only parameter!" &lt;&lt; endl;
+    exit(1);
+  }
+
+    // attempt to open the supplied file.  FILE is a type desgined to
+    // hold file pointers.  The first parameter to fopen() is the
+    // filename.  The second parameter is the mode -- "r" means it
+    // will read from the file.
+    FILE *fp = fopen(argv[1], "r");
+    // if the file wasn't found, output and error message and exit
+    if ( fp == NULL ) {
+      cout &lt;&lt; "File '" &lt;&lt; argv[1] &lt;&lt; "' does not exist!" &lt;&lt; endl;
+      exit(2);
+    }
+
+    vector&lt;huffNode *&gt; v;
+    char g;
+    string f;
+
+    // read in each character, one by one.  Note that the fgetc() will
+    // read in a single character from a file, and returns EOF when it
+    // reaches the end of a file.
+    while ( (g = fgetc(fp)) != EOF ){
+      if (g != '\n'){
+    f += g;
+      }
+    }
+
+    // sort filey string to work with "unique" algorithm
+    string filey = f;
+    sort(filey.begin(), filey.end());
+
+    // initialize vector with all characters in file
+    vector&lt;char&gt; charry(filey.begin(), filey.end());
+
+    // modify vector to contain only unique characters
+    vector&lt;char&gt;::iterator it;
+    // usage of unique algorithm found at link below
+    // http://tinyurl.com/dyjlcye
+    it = unique(charry.begin(), charry.end());
+    charry.resize(distance(charry.begin(),it) );
+
+    //cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+    //cout &lt;&lt; f &lt;&lt; endl;
+    //cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+
+   vector&lt;huffNode *&gt; tv;
+    // for each character in charry vector, count freq
+    for(int a = 0; a &lt; charry.size(); a++){
+      int freq = 0;
+      // for each character in original file string,
+      for(int i = 0; i &lt; f.size(); i++){
+    // if the character in orig file string matches char in charry,
+      if(charry[a] == f[i]){
+        // add to frequency
+        freq++;
+      }
+      }
+      // then insert a huffNode with that char and freq
+      huffNode * in = new huffNode(charry[a], freq);
+      tv.push_back(in);
+    }
+
+    // heap of character frequencies
+    bh = heap(tv);
+
+    //bh.print();
+
+    //cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+
+    // END OF FREQUENCY PRIORITY QUEUE CREATION
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // BEGIN PREFIX CODE TREE BUILD
+
+    // while we have not formed the complete tree,
+    while(bh.size() != 1){
+      huffNode * lowOne = bh.deleteMin();
+      huffNode * lowTwo = bh.deleteMin();
+      huffNode * parent = new huffNode('#', (lowOne-&gt;freq + lowTwo-&gt;freq));
+      parent-&gt;l = lowOne;
+      parent-&gt;r = lowTwo;
+      bh.insert(parent);
+    }
+
+    // writes unique bit codes to the tree
+    bh.writebitcode(bh.findMin(), "", 0);
+
+    // writes prefix codes to output
+    for(int i = 0; i &lt; bh.bitcodes.size(); i++){
+
+      if(bh.bitcodes[i]-&gt;character == ' '){
+    cout &lt;&lt; "SPACE\t" &lt;&lt; bh.bitcodes[i]-&gt;bitcode&lt;&lt; endl;
+      } else{
+    cout &lt;&lt; bh.bitcodes[i]-&gt;character &lt;&lt; "\t" &lt;&lt; bh.bitcodes[i]-&gt;bitcode &lt;&lt; endl;
+      }
+    }
+
+    cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+
+    // rewinds the file pointer, so that it starts reading the file
+    // again from the begnning
+    rewind(fp);
+
+    // read the file again, and print to the screen
+    while ( (g = fgetc(fp)) != EOF ){
+      for(int i = 0; i &lt; bh.bitcodes.size(); i++){
+    if(g == bh.bitcodes[i]-&gt;character){
+      cout &lt;&lt; bh.bitcodes[i]-&gt;bitcode &lt;&lt; " ";
+    }
+
+      }
+    }
+    cout &lt;&lt; endl;
+    // close the file
+    fclose(fp);
+
+    cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+
+    // print out compression ratio
+    // defined in bits as: (size of original file)/(size of compressed file)
+    // exclude size of the prefix code tree in the compression ratio
+    // assume that the 0s and 1s you generated for the compressed
+    // file count as one bit each (rather than an 8-bit character)
+
+    // bh.findMin()-freq gives symbol total, multiply by 8 = bits in orig file
+    double symbols = bh.findMin()-&gt;freq;
+    double bitsOriginalFile = (bh.findMin()-&gt;freq) * 8;
+    double bitsCompressed = 0.0;
+    for(int i = 0; i &lt; bh.bitcodes.size(); i++){
+      bitsCompressed += (bh.bitcodes[i]-&gt;len * bh.bitcodes[i]-&gt;freq);
+    }
+    //cout &lt;&lt; "bits compressed : " &lt;&lt; bitsCompressed &lt;&lt; endl;
+    cout &lt;&lt; "Compression ratio: " &lt;&lt; bitsOriginalFile / bitsCompressed &lt;&lt; endl;
+
+
+    //cout &lt;&lt; "----------------------------------------" &lt;&lt; endl;
+    // print out Huffman tree cost
+    // ex if
+    // letter frequency code
+    // a      3/7       0      -&gt; a: (3/7) * 1 = (3/7)
+    // b      1/7       100    -&gt; b: (1/7) * 3 = (3/7)
+    // c      1/7       101    -&gt; c: (1/7) * 3 = (3/7)
+    // d      2/7       11     -&gt; d: (2/7) * 2 = (2/7)
+    //                                         _________
+    //                            + (13/7) = 1.85 bits per character
+    double huffCost = 0.0;
+    for(int i = 0; i &lt; bh.bitcodes.size(); i++){
+      huffCost += ((bh.bitcodes[i]-&gt;freq / symbols) * (bh.bitcodes[i]-&gt;len));
+
+    }
+    cout &lt;&lt; "The Huffman tree cost: " &lt;&lt; huffCost &lt;&lt; " bits per character" &lt;&lt; endl;
+}</code></pre>
+<br>
+<br>
+<b>huffmandec.cpp</b>
+<pre><code class="cpp">#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;sstream&gt;
+#include &lt;stdlib.h&gt;
+using namespace std;
+
+struct huffNode {
+  char character;
+  huffNode* l;
+  huffNode* r;
+
+  huffNode(char c){
+    character = c;
+    l = NULL;
+    r = NULL;
+  }
+};
+
+void makeTree(huffNode * root, string bitcode, char c);
+
+// root of tree
+huffNode * root = new huffNode('#');
+
+// main(): we want to use parameters
+int main (int argc, char **argv) {
+    // verify the correct number of parameters
+    if ( argc != 2 ) {
+        cout &lt;&lt; "Must supply the input file name as the only parameter" &lt;&lt; endl;
+        exit(1);
+    }
+    // attempt to open the supplied file; must be opened in binary
+    // mode, as otherwise whitespace is discarded
+    ifstream file(argv[1], ifstream::binary);
+    // report any problems opening the file and then exit
+    if ( !file.is_open() ) {
+        cout &lt;&lt; "Unable to open file '" &lt;&lt; argv[1] &lt;&lt; "'." &lt;&lt; endl;
+        exit(2);
+    }
+
+    // read in the first section of the file: the prefix codes
+    while ( true ) {
+      string character, prefix;
+        // read in the first token on the line
+        file &gt;&gt; character;
+        // did we hit the separator?
+        if ( (character[0] == '-') && (character.length() &gt; 1) )
+            break;
+        // check for space
+        if ( character == "space" || character == "SPACE" )
+       character = " ";
+    // read in the prefix code
+        file &gt;&gt; prefix;
+
+    // build the tree
+    makeTree(root, prefix, character[0]);
+    }
+
+    // read in the second section of the file: the encoded message
+    stringstream sstm;
+
+    while ( true ) {
+        string bits;
+        // read in the next set of 1's and 0's
+        file &gt;&gt; bits;
+    //cout &lt;&lt; "THE CURRENT BIT: " &lt;&lt; bits &lt;&lt; endl;
+    // check for the separator
+        if ( bits[0] == '-' )
+            break;
+        // add it to the stringstream
+        sstm &lt;&lt; bits;
+    }
+
+    string allbits = sstm.str();
+    // at this point, all the bits are in the 'allbits' string
+    //cout &lt;&lt; "All the bits: " &lt;&lt; allbits &lt;&lt; endl;
+    // close the file before exiting
+    file.close();
+
+    huffNode * cur = root;
+    for(int i = 0; i &lt; allbits.size() + 1; i++){
+
+      // its a leaf!
+     if(cur-&gt;l == NULL && cur-&gt;r == NULL){
+       cout &lt;&lt; cur-&gt;character;
+       cur = root; // go back to the root
+     }
+     if(allbits[i] == '1' && cur-&gt;r != NULL){
+    cur = cur-&gt;r; // go right
+      }
+     else if (allbits[i] == '0' && cur-&gt;l != NULL){
+    cur = cur-&gt;l; // go left
+      }
+    }
+    // testing
+    /*cout &lt;&lt; root-&gt;character;
+      cout &lt;&lt; root-&gt;l-&gt;character;
+      cout &lt;&lt; root-&gt;r-&gt;l-&gt;l-&gt;character;
+      cout &lt;&lt; root-&gt;r-&gt;l-&gt;r-&gt;character;
+      cout &lt;&lt; root-&gt;r-&gt;r-&gt;character;
+    */
+
+    cout &lt;&lt; endl;
+}
+
+  // recursive method that looks at the last character of the bitcode
+  // each call looks at the next last character until there are no  more left
+void makeTree(huffNode * root, string bitcode, char c){
+  // non-mutating remove last char from string from:
+  // http://stackoverflow.com/questions/2310939/remove-last-character-from-c-string
+  if(bitcode.length() == 0){ // then it is a leaf !
+    //cout &lt;&lt; "creating a leaf! with character: " &lt;&lt; c &lt;&lt; endl;
+    root-&gt;character = c;
+  }
+  // otherwise, not a leaf so look at first char of bitcode, if 0,
+  if(bitcode[0] == '0'){
+    // if left child not there yet,
+     if(root-&gt;l == NULL){
+       // make one
+       root-&gt;l = new huffNode('#'); // assigns temp val to new huff node
+     }
+     // otherwise, recur on the left child 1 less char from bitcode
+     makeTree(root-&gt;l, bitcode.substr(1, bitcode.size()-1), c);
+   }
+
+  // look at first char of bitocde, if 0,
+  else if(bitcode[0] == '1'){
+     // if right child not there yet,
+    if(root-&gt;r == NULL){
+      // make one
+      root-&gt;r = new huffNode('#'); // assigns temp val to new huff node
+    }
+    // otherwise, recur on right child and 1 less char form bitcode
+     makeTree(root-&gt;r, bitcode.substr(1, bitcode.size()-1), c);
+  }
+}</code></pre>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Graph Modal -->
+    <div class="modal fade" id="Graphs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 11: Graphs</h4>
+          </div>
+          <div class="modal-body">
+            <br>Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab11/index.html">here</a>
+            <br>
+            <br>
+<b>traveling.cpp</b>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+
+#include "middleearth.h"
+
+/**
+ * @brief computes distance for the entire cycle of list of destinations
+ *
+ * @param me middle earth object
+ * @param start the starting place (and ending place since cycle)
+ * @param dests the destinations to go to
+ * @return the distance as a float
+ *
+ */
+float computeDistance (MiddleEarth &me, string start, vector&lt;string&gt; dests);
+
+/**
+ * @brief prints the journey that will be taken
+ *
+ * @param start the starting place of the journey (and ending place too)
+ * @param dests the destinations to go to
+ * no return, void
+ *
+ */
+void printRoute (string start, vector&lt;string&gt; dests);
+
+
+int main (int argc, char **argv) {
+    // check the number of parameters
+    if ( argc != 6 ) {
+        cout &lt;&lt; "Usage: " &lt;&lt; argv[0] &lt;&lt; " &lt;world_height&gt; &lt;world_width&gt; "
+             &lt;&lt; "&lt;num_cities&gt; &lt;random_seed&gt; &lt;cities_to_visit&gt;" &lt;&lt; endl;
+        exit(0);
+    }
+    // we'll assume the parameters are all well-formed
+    int width, height, num_cities, rand_seed, cities_to_visit;
+    sscanf (argv[1], "%d", &width);
+    sscanf (argv[2], "%d", &height);
+    sscanf (argv[3], "%d", &num_cities);
+    sscanf (argv[4], "%d", &rand_seed);
+    sscanf (argv[5], "%d", &cities_to_visit);
+    // Create the world, and select your itinerary
+    MiddleEarth me(width, height, num_cities, rand_seed); //!&lt; MIDDLEEARTH ME middle earth object
+    vector&lt;string&gt; dests = me.getItinerary(cities_to_visit); //!&lt; VECTOR&lt;STRING&gt; DESTS destinations vector
+
+
+    string start = dests.at(0); //!&lt; STRING START start location
+
+    // sorts dests vector
+    sort(dests.begin()+1, dests.end());
+
+
+    float initDistance = computeDistance(me, start, dests); //!&lt; FLOAT INITDISTANCE initial distance
+
+    //cout &lt;&lt; "INITIAL DISTANCE: " &lt;&lt; initDistance &lt;&lt; endl;
+
+    // goes through permutations of the cities
+    // does not include the start city
+    float distance = 0.0;
+    vector &lt;string&gt; shortestRoute;
+    while(next_permutation(dests.begin()+1, dests.end())){
+      distance = computeDistance(me, start, dests);
+      if(distance &lt; initDistance){
+    // if current permutation has shorter travel distance
+    initDistance = distance;
+    // update shortest route
+    shortestRoute = dests;
+    //printRoute(start, shortestRoute);
+    //cout &lt;&lt; "and will have length "
+    // &lt;&lt; computeDistance(me, start, shortestRoute) &lt;&lt; endl;
+      }
+    }
+
+    printRoute(start, shortestRoute);
+    cout &lt;&lt; "and will have length "
+     &lt;&lt; computeDistance(me, start, shortestRoute) &lt;&lt; endl;
+    cout &lt;&lt; endl;
+    return 0;
+}
+
+// This method will compute the full distance of the cycle that starts
+// at the 'start' parameter, goes to each of the cities in the dests
+// vector IN ORDER, and ends back at the 'start' parameter.
+float computeDistance (MiddleEarth &me, string start, vector&lt;string&gt; dests) {
+  float distance = 0.0;
+  for(int i = 0; i &lt; dests.size()-1; i++){
+    //cout &lt;&lt; "from " &lt;&lt; dests.at(i) &lt;&lt; " to " &lt;&lt; dests.at(i+1) &lt;&lt; endl;
+    //cout &lt;&lt; "DIST: " &lt;&lt; me.getDistance(dests.at(i), dests.at(i+1)) &lt;&lt; endl;
+    distance += me.getDistance(dests.at(i), dests.at(i+1));
+  }
+  // distance from start to first city
+  distance += me.getDistance(start, dests.at(0));
+
+  // distance from second to last city back to start city
+  distance += me.getDistance(dests.at(dests.size()-1), start);
+
+  return distance;
+}
+
+// This method will print the entire route, starting and ending at the
+// 'start' parameter.  The output should be of the form:
+// Erebor -&gt; Khazad-dum -&gt; Michel Delving -&gt; Bree -&gt; Cirith Ungol -&gt; Erebor
+void printRoute (string start, vector&lt;string&gt; dests) {
+  cout &lt;&lt; endl;
+  cout &lt;&lt; "Your journey will take you along the path: " &lt;&lt; endl;
+  cout &lt;&lt; start &lt;&lt; " -&gt; ";
+  for(int i = 1; i &lt; dests.size(); i++){
+    cout &lt;&lt; dests.at(i) &lt;&lt; " -&gt; ";
+    if ( i % 3 == 0){
+      cout &lt;&lt; endl;
+    }
+  }
+  cout &lt;&lt; start &lt;&lt; endl;
+  cout &lt;&lt; endl;
+}</code></pre>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Graph Modal -->
+    <div class="modal fade" id="ObjectiveC" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Lab 12: Conclusion</h4>
+          </div>
+          <div class="modal-body">
+          Lab instructions can be found <a href="http://aaronbloomfield.github.io/pdr/labs/lab12/index.html">here</a>
+            <br>
+            <br>
+
+
+<b>linkedlist.m</b>
+<pre><code class="objectivec">#import &lt;Foundation/NSObject.h&gt;
+
+@interface ListNode : NSObject {
+@private
+  int val;
+  ListNode *next;
+}
+
+- (id) val: (int) val_value;
+- (int) val;
+- (id) next: (ListNode*) next_value;
+- (ListNode*) next;
+
+@end
+
+@implementation ListNode
+
+- (id) val: (int) val_value {
+  val = val_value;
+  return self;
+}
+
+- (int) val {
+  return val;
+}
+
+- (id) next: (ListNode*) next_value {
+  next = next_value;
+  return self;
+}
+
+- (ListNode*) next {
+  return next;
+}
+
+@end
+
+
+
+int main (void) {
+
+  ListNode *cur = [ListNode new];
+
+  int amount = 0;
+  printf("Enter how many values to enter\n");
+  scanf("%d", &amount);
+
+  int i;
+  for(i = 1; i < amount+1; i++){
+    int value;
+    printf("Enter value %d: ", i);
+    scanf("%d", &value);
+
+    ListNode *node = [ListNode new];
+    [node val: value];
+    [node next: cur];
+    cur = node;
+  }
+
+  int j;
+  for(j = 0; j < amount; j++){
+    int pr = [cur val];
+    printf("%d\n", pr);
+    cur = [cur next];
+  }
+
+  /* idea from my makeEmpty() function from List.cpp*/
+  ListNode *removeThis = [cur next];
+
+  while(removeThis != NULL){
+    // what lovely syntax we got here...
+    // setting cur's next to the next of cur next
+    [cur next: [[cur next] next]];
+    [removeThis release];
+    removeThis = [cur next];
+  }
+
+
+  return 0;
+}</code></pre>
+
+<samp>Enter how many values to enter<br>
+4<br>
+Enter value 1: 2<br>
+Enter value 2: 4<br>
+Enter value 3: 6<br>
+Enter value 4: 8<br>
+8<br>
+6<br>
+4<br>
+2</samp>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map-container'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 15
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
 
-        var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
+</body>
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            var whiteHouse = {
-              lat: 38.897627,
-              lng: -77.036412
-            };
-
-            map.setCenter(whiteHouse);
-
-            var marker_1 = new google.maps.Marker({
-              position: whiteHouse,
-              map: map
-            });
-
-            google.maps.event.addListener(marker_1, 'click', function(){
-              $('#myModal').modal('show')
-            });
-
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
-    </script>
-
-
-
-
-  </body>
 </html>
