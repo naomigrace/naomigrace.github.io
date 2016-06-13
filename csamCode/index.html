@@ -162,6 +162,10 @@
               $('#myModal').modal('show')
             });
 
+            var trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
+
+
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
