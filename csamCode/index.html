@@ -133,7 +133,7 @@
       center: {lat: -34.397, lng: 150.644},
       zoom: 15
     });
-
+    var infoWindow = new google.maps.InfoWindow({map: map}); // what is this? to delete?
     // Add interaction listeners to make weather requests
     google.maps.event.addListener(map, 'idle', checkIfDataRequested);
 
@@ -145,10 +145,6 @@
         + "<br />" + event.feature.getProperty("temperature") + "&deg;C"
         + "<br />" + event.feature.getProperty("weather")
       );
-
-
-      // what is this? to delete?
-      var infoWindow = new google.maps.InfoWindow({map: map});
 
       // Try HTML5 geolocation.
       if (navigator.geolocation) {
