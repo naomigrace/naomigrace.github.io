@@ -1,104 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- Fontawesome CSS -->
-    <script src="https://use.fontawesome.com/469c8a0402.js"></script>
+  <!-- Fontawesome CSS -->
+  <script src="https://use.fontawesome.com/469c8a0402.js"></script>
 
-    <!-- Custom CSS -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- Source Sans Pro Font -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700' rel='stylesheet' type='text/css'>
 
-    <!-- Source Sans Pro Font -->
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700' rel='stylesheet' type='text/css'>
+  <!-- Custom CSS -->
+  <style>
+  body, html {
+    margin-top: 25px;
+    height: 100%;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 
-    <style>
+  #map-container {
+    width: 100%;
+    height: 80%;
+    padding-bottom: 100px;
+  }
 
-    html, body, #map-canvas {
-            height: 100%;
-            margin: 0px;
-            padding: 0px
-          }
-    </style>
+  .navbar-collapse.collapse {
+    display: block!important;
+  }
 
-  </head>
+  .navbar-nav>li, .navbar-nav {
+    float: left !important;
+  }
 
-  <body>
+  .navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+  }
 
-    <!-- Map and Modal -->
-    <div id="map-canvas"></div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+  .navbar-right {
+    float: right!important;
+  }
+
+  .navbar-default {
+    text-align: center;
+  }
+
+  .navbar-default .navbar-brand{
+    color: #364f6c;
+  }
+
+  .navbar-default .navbar-brand:hover{
+
+    background-color: #364f6c;
+    color: #fff;
+  }
+
+  ul.nav a:hover {
+    color: #fff !important;
+    background-color: #364f6c !important;
+  }
+
+
+
+  </style>
+</head>
+
+
+<body>
+  <!-- TOP LOGO & OTHER INFORMATION NAVIGATION-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand navbar-header" href="#">COMMANDER <i class="fa fa-star" aria-hidden="true"></i> SAM</a>
+    </div>
+  </nav>
+
+  <!-- BOTTOM ICON NAVIGATION-->
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a class="maplink" href="#" style="color:#249f60;"><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
+        <!-- map layers dropdown -->
+        <li class="dropup">
+          <a href="#" class="dropdown-toggle" style="color:#2e9eb6;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i><br>layers<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a id="weatherToggle" href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
+            <li><a id="trafficToggle" href="#" style="color: #2e9eb6;"><i class="fa fa-car fa-lg" aria-hidden="true"></i><br>traffic</a></li>
+            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-ambulance fa-lg" aria-hidden="true"></i><br>hospitals</a></li>
+          </ul>
+        </li>
+        <li><a href="#" style="color: #d5681a;"><i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i><br>news</a></li>
+        <li><a href="#" style="color: #e64966;"><i class="fa fa-bell-o fa-lg" aria-hidden="true"></i><br>alerts</a></li>
+        <li><a href="#"><i class="fa fa-sliders fa-lg" aria-hidden="true"></i><br>settings</a></li>
+      </ul>
+
+    </div><!-- /.container-fluid -->
+  </nav><!-- /.navbar navbar-default navbar-fixed-bottom -->
+
+  <!-- MAP & MODAL SAMPLE -->
+  <div id="map-container"></div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-    <!-- jQuery first, then Bootstrap JS.
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>-->
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+  <script>
 
-    <script>
-      function initialize() {
-      var map;
-      var mapOptions = {
-        zoom: 14,
-        center: new google.maps.LatLng(19.379405900, -99.159144600),
-        disableUi: true
-      };
-      map = new google.maps.Map(document.getElementById('map-canvas'),
-          mapOptions);
-      var markers = [
-            ['Delegación, Benito Juarez', 19.379405900, -99.159144600],
-            ['Joaquin Capilla, Benito Juarez', 19.370192904, -99.190401478]
-        ];
-      var image = 'http://ecodesarrollo.org.mx/images/pin.png';
-        var myLatlng = new google.maps.LatLng(19.379405900, -99.159144600);
-        var marker_1 = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            icon: image,
-            name: 'Benito Juarez'
+  var map;
+  var geoJSON;
+  var request;
+  var gettingData = false;
+  var openWeatherMapKey = "ABC..."
+
+  function initialize() {
+    var mapOptions = {
+      zoom: 4,
+      center: new google.maps.LatLng(50,-50)
+    };
+
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+    // Add interaction listeners to make weather requests
+    google.maps.event.addListener(map, 'idle', checkIfDataRequested);
+
+    // Sets up and populates the info window with details
+    map.data.addListener('click', function(event) {
+      infowindow.setContent(
+       "<img src=" + event.feature.getProperty("icon") + ">"
+       + "<br /><strong>" + event.feature.getProperty("city") + "</strong>"
+       + "<br />" + event.feature.getProperty("temperature") + "&deg;C"
+       + "<br />" + event.feature.getProperty("weather")
+       );
+      infowindow.setOptions({
+          position:{
+            lat: event.latLng.lat(),
+            lng: event.latLng.lng()
+          },
+          pixelOffset: {
+            width: 0,
+            height: -15
+          }
         });
+      infowindow.open(map);
+    });
+  }
 
-        google.maps.event.addListener(marker_1, 'click', function() {
-    		$('#myModal').modal('show')
-        });
+  var checkIfDataRequested = function() {
+    // Stop extra requests being sent
+    while (gettingData === true) {
+      request.abort();
+      gettingData = false;
+    }
+    getCoords();
+  };
+
+  // Get the coordinates from the Map bounds
+  var getCoords = function() {
+    var bounds = map.getBounds();
+    var NE = bounds.getNorthEast();
+    var SW = bounds.getSouthWest();
+    getWeather(NE.lat(), NE.lng(), SW.lat(), SW.lng());
+  };
+
+  // Make the weather request
+  var getWeather = function(northLat, eastLng, southLat, westLng) {
+    gettingData = true;
+    var requestString = "http://api.openweathermap.org/data/2.5/box/city?bbox="
+                        + westLng + "," + northLat + "," //left top
+                        + eastLng + "," + southLat + "," //right bottom
+                        + map.getZoom()
+                        + "&cluster=yes&format=json"
+                        + "&APPID=" + "551b97ca557560dfc7d8c49a81b37d89";
+    request = new XMLHttpRequest();
+    request.onload = proccessResults;
+    request.open("get", requestString, true);
+    request.send();
+  };
+
+  // Take the JSON results and proccess them
+  var proccessResults = function() {
+    console.log(this);
+    var results = JSON.parse(this.responseText);
+    if (results.list.length > 0) {
+        resetData();
+        for (var i = 0; i < results.list.length; i++) {
+          geoJSON.features.push(jsonToGeoJson(results.list[i]));
+        }
+        drawIcons(geoJSON);
+    }
+  };
+
+  var infowindow = new google.maps.InfoWindow();
+
+  // For each result that comes back, convert the data to geoJSON
+  var jsonToGeoJson = function (weatherItem) {
+    var feature = {
+      type: "Feature",
+      properties: {
+        city: weatherItem.name,
+        weather: weatherItem.weather[0].main,
+        temperature: weatherItem.main.temp,
+        min: weatherItem.main.temp_min,
+        max: weatherItem.main.temp_max,
+        humidity: weatherItem.main.humidity,
+        pressure: weatherItem.main.pressure,
+        windSpeed: weatherItem.wind.speed,
+        windDegrees: weatherItem.wind.deg,
+        windGust: weatherItem.wind.gust,
+        icon: "http://openweathermap.org/img/w/"
+              + weatherItem.weather[0].icon  + ".png",
+        coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [weatherItem.coord.lon, weatherItem.coord.lat]
       }
+    };
+    // Set the custom marker icon
+    map.data.setStyle(function(feature) {
+      return {
+        icon: {
+          url: feature.getProperty('icon'),
+          anchor: new google.maps.Point(25, 25)
+        }
+      };
+    });
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    // returns object
+    return feature;
+  };
 
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
-    </script>
+  // Add the markers to the map
+  var drawIcons = function (weather) {
+     map.data.addGeoJson(geoJSON);
+     // Set the flag to finished
+     gettingData = false;
+  };
 
+  // Clear data layer and geoJSON
+  var resetData = function () {
+    geoJSON = {
+      type: "FeatureCollection",
+      features: []
+    };
+    map.data.forEach(function(feature) {
+      map.data.remove(feature);
+    });
+  };
 
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 
+  <!-- temporary API code below for use at NG's github site -->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
+  </script>
 
-  </body>
+  <!-- OpenWeatherMap Javascript -->
+  <script src="/js/plugins/openWeather.js"></script>
+
+</body>
 </html>
