@@ -23,50 +23,37 @@
     width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
   }
-
   #map-container {
     width: 100%;
     height: 80%;
     padding-bottom: 100px;
   }
-
   .navbar-collapse.collapse {
     display: block!important;
   }
-
   .navbar-nav>li, .navbar-nav {
     float: left !important;
   }
-
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px !important;
   }
-
   .navbar-right {
     float: right!important;
   }
-
   .navbar-default {
     text-align: center;
   }
-
   .navbar-default .navbar-brand{
     color: #364f6c;
   }
-
   .navbar-default .navbar-brand:hover{
-
     background-color: #364f6c;
     color: #fff;
   }
-
   ul.nav a:hover {
     color: #fff !important;
     background-color: #364f6c !important;
   }
-
-
-
   </style>
 </head>
 
@@ -83,13 +70,13 @@
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li class="active"><a class="maplink" href="#" style="color:#249f60;"><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
+        <li class="active"><a class="maplink" href="#" style="color:#249f60;" ><i class="fa fa-map-o fa-lg" aria-hidden="true"></i><span class="sr-only">(current)</span><br>map</a></li>
         <!-- map layers dropdown -->
         <li class="dropup">
           <a href="#" class="dropdown-toggle" style="color:#2e9eb6;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file-o fa-lg" aria-hidden="true"></i><br>layers<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a id="weatherToggle" href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
-            <li><a id="trafficToggle" href="#" style="color: #2e9eb6;"><i class="fa fa-car fa-lg" aria-hidden="true"></i><br>traffic</a></li>
+            <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-sun-o fa-lg" aria-hidden="true"></i><br>weather</a></li>
+            <li><button class="btn btn-link" id="trafficToggle" style="color: #2e9eb6;"><i class="fa fa-car fa-lg" aria-hidden="true"></i><br>Traffic</button></li>
             <li><a href="#" style="color: #2e9eb6;"><i class="fa fa-ambulance fa-lg" aria-hidden="true"></i><br>hospitals</a></li>
           </ul>
         </li>
@@ -134,14 +121,23 @@
   var gettingData = false;
   var openWeatherMapKey = "8032d2849a58979469990327ea564ffa"
 
-  function initialize() {
-    var mapOptions = {
-      zoom: 4,
-      center: new google.maps.LatLng(50,-50)
-    };
+  // Clear data layer and geoJSON
+var resetData = function () {
+geoJSON = {
+  type: "FeatureCollection",
+  features: []
+};
+map.data.forEach(function(feature) {
+  map.data.remove(feature);
+});
+};
 
-    map = new google.maps.Map(document.getElementById('map-container'),
-        mapOptions);
+function initialize() {
+    map = new google.maps.Map(document.getElementById('map-container'), {
+      zoom: 4,
+      center: {lat: 40.7590113, lng: -73.9861624}
+    });
+
     // Add interaction listeners to make weather requests
     google.maps.event.addListener(map, 'idle', checkIfDataRequested);
 
@@ -199,22 +195,7 @@
     request.send();
   };
 
-  // Take the JSON results and proccess them
-  var proccessResults = function() {
-    console.log(this);
-    var results = JSON.parse(this.responseText);
-    if (results.list.length > 0) {
-        resetData();
-        for (var i = 0; i < results.list.length; i++) {
-          geoJSON.features.push(jsonToGeoJson(results.list[i]));
-        }
-        drawIcons(geoJSON);
-    }
-  };
-
-  var infowindow = new google.maps.InfoWindow();
-
-  // For each result that comes back, convert the data to geoJSON
+    // For each result that comes back, convert the data to geoJSON
   var jsonToGeoJson = function (weatherItem) {
     var feature = {
       type: "Feature",
@@ -259,27 +240,88 @@
      gettingData = false;
   };
 
-  // Clear data layer and geoJSON
-  var resetData = function () {
-    geoJSON = {
-      type: "FeatureCollection",
-      features: []
-    };
-    map.data.forEach(function(feature) {
-      map.data.remove(feature);
-    });
+  // Take the JSON results and proccess them
+  var proccessResults = function() {
+    console.log(this);
+    var results = JSON.parse(this.responseText);
+    if (results.list.length > 0) {
+        resetData();
+        for (var i = 0; i < results.list.length; i++) {
+          geoJSON.features.push(jsonToGeoJson(results.list[i]));
+        }
+        drawIcons(geoJSON);
+    }
   };
 
-  google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
+  var infowindow = new google.maps.InfoWindow();
 
-  <!-- temporary API code below for use at NG's github site -->
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
-  </script>
 
-  <!-- OpenWeatherMap Javascript -->
-  <script src="/js/plugins/openWeather.js"></script>
 
-</body>
-</html>
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map-container'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 15
+    });
+    var infoWindow = new google.maps.InfoWindow({map: map});
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        // whiteHouse coordinates
+        var whiteHouse = {
+          lat: 38.897627,
+          lng: -77.036412
+        };
+        // centers map at whiteHouse
+        map.setCenter(pos);
+        var marker_1 = new google.maps.Marker({
+          position: whiteHouse,
+          map: map
+        });
+        // opens up modal if whiteHouse marker is clicked
+        google.maps.event.addListener(marker_1, 'click', function(){
+          $('#myModal').modal('show')
+        });
+        // initializes and displays traffic layer
+        var trafficLayer = new google.maps.TrafficLayer();
+        google.maps.event.addDomListener(document.getElementById('trafficToggle'), 'click', toggleTraffic);
+        function toggleTraffic(){
+          if(trafficLayer.getMap() == null){
+            // traffic layer disabled --> lets enable
+            trafficLayer.setMap(map);
+          } else {
+            // otherwise, lets disable
+            trafficLayer.setMap(null);
+          }
+        }
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  }
+  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+      'Error: The Geolocation service failed.' :
+      'Error: Your browser doesn\'t support geolocation.');
+    }
+
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+    <!-- temporary API code below for use at NG's github site -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
+    </script>
+
+  </body>
+  </html>
