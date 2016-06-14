@@ -163,53 +163,75 @@
         // Add interaction listeners to make weather requests
         google.maps.event.addListener(map, 'idle', checkIfDataRequested);
 
-        var checkIfDataRequested = function() {
-          // Stop extra requests being sent
-          while (gettingData === true) {
-            request.abort();
-            gettingData = false;
-          }
-          getCoords();
-        };
+        // Sets up and populates the info window with details
+        map.data.addListener('click', function(event) {
+          infowindow.setContent(
+            "<img src=" + event.feature.getProperty("icon") + ">"
+            + "<br /><strong>" + event.feature.getProperty("city") + "</strong>"
+            + "<br />" + event.feature.getProperty("temperature") + "&deg;C"
+            + "<br />" + event.feature.getProperty("weather")
+          );
+          infowindow.setOptions({
+            position:{
+              lat: event.latLng.lat(),
+              lng: event.latLng.lng()
+            },
+            pixelOffset: {
+              width: 0,
+              height: -15
+            }
+          });
+          infowindow.open(map);
+        });
+      }
 
-        // initializes and displays traffic layer
-        var trafficLayer = new google.maps.TrafficLayer();
-        google.maps.event.addDomListener(document.getElementById('trafficToggle'), 'click', toggleTraffic);
-
-        function toggleTraffic(){
-          if(trafficLayer.getMap() == null){
-            // traffic layer disabled --> lets enable
-            trafficLayer.setMap(map);
-          } else {
-            // otherwise, lets disable
-            trafficLayer.setMap(null);
-          }
+      var checkIfDataRequested = function() {
+        // Stop extra requests being sent
+        while (gettingData === true) {
+          request.abort();
+          gettingData = false;
         }
+        getCoords();
+      };
 
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
+      // initializes and displays traffic layer
+      var trafficLayer = new google.maps.TrafficLayer();
+      google.maps.event.addDomListener(document.getElementById('trafficToggle'), 'click', toggleTraffic);
+
+      function toggleTraffic(){
+        if(trafficLayer.getMap() == null){
+          // traffic layer disabled --> lets enable
+          trafficLayer.setMap(map);
+        } else {
+          // otherwise, lets disable
+          trafficLayer.setMap(null);
+        }
+      }
+
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
   }
+}
 
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-      'Error: The Geolocation service failed.' :
-      'Error: Your browser doesn\'t support geolocation.');
-    }
-    </script>
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
+  }
+  </script>
 
-    <!-- temporary API code below for use at NG's github site -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
-    </script>
+  <!-- temporary API code below for use at NG's github site -->
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ASfYUTVafNwn_g_3P73DIpO4DzJ1Dgk&callback=initMap">
+  </script>
 
-    <!-- OpenWeatherMap Javascript -->
-    <script src="/js/plugins/openWeather.js"></script>
+  <!-- OpenWeatherMap Javascript -->
+  <script src="/js/plugins/openWeather.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
