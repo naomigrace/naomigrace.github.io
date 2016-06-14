@@ -164,7 +164,8 @@
         // Add interaction listeners to make weather requests
         google.maps.event.addListener(map, 'idle', checkIfDataRequested);
 
-        
+        // info window initMap
+        var infowindow = new google.maps.InfoWindow();
 
 
       var checkIfDataRequested = function() {
