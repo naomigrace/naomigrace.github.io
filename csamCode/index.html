@@ -290,19 +290,7 @@
         });
       };
 
-      // initializes and displays traffic layer
-      var trafficLayer = new google.maps.TrafficLayer();
-      google.maps.event.addDomListener(document.getElementById('trafficToggle'), 'click', toggleTraffic);
 
-      function toggleTraffic(){
-        if(trafficLayer.getMap() == null){
-          // traffic layer disabled --> lets enable
-          trafficLayer.setMap(map);
-        } else {
-          // otherwise, lets disable
-          trafficLayer.setMap(null);
-        }
-      }
 
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
