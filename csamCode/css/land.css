@@ -1,0 +1,91 @@
+/* Toggle Styles */
+body, html {
+  margin-top: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;}
+
+/*.col-centered{
+    float: none;
+    margin: 0 auto;
+}*/
+
+.login{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .top-nav-collapse {
+        padding-top: 20px;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+
+.navbar-fixed-top{
+  padding: 20px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: 110%;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #292674;
+    background: url('img/unclesam.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-height: none;
+}
+
+.about-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+    max-height: none;
+}
+
+.services-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+    max-height: none;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+    max-height: none;
+}
