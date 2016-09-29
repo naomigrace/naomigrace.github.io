@@ -1,0 +1,23 @@
+body {
+    color: #3d414c;
+}
+
+#hello {
+    margin-top: 3em;
+}
+
+h1.title {
+    color: #3d414c;
+}
+
+h2, h3, h4{
+    color: #3d414c;
+}
+
+a {
+    color: #6b88e0;
+}
+
+a:hover {
+    color: #b2bbc0;
+}
