@@ -39,17 +39,34 @@
 
             <nav id="navbar" class="navbar navbar-light fixed-top bg-light p-1 p-sm-auto">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Naomi-Grace's Graduation</a>
+                    <a class="navbar-brand" href="#">Naomi's Grad</a>
                     <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#ceremony0">Cer. 0</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                               aria-haspopup="true" aria-expanded="false">Fri</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#friday">Friday Info</a>
+                                 <a class="dropdown-item" href="#ceremony0">Ceremony 0</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#ceremony1">Cer. 1</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                               aria-haspopup="true" aria-expanded="false">Sat</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#saturday">Saturday Info</a>
+                                 <a class="dropdown-item" href="#ceremony1">Ceremony 1</a>
+                                <a class="dropdown-item" href="#ceremony2">Ceremony 2</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#ceremony2">Cer. 2</a>
-                        </li>
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link" href="#ceremony0">Cer. 0</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link" href="#ceremony1">Cer. 1</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                            <!--<a class="nav-link" href="#ceremony2">Cer. 2</a>-->
+                        <!--</li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                aria-haspopup="true" aria-expanded="false">FAQ</a>
@@ -67,7 +84,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="alert alert-danger mt-5 mt-sm-5" role="alert">
+            <div class="alert alert-danger mt-2" role="alert">
                 <strong>UPDATE:</strong> RAIN DAY LOCATION FOR CEREMONY 0 DUE TO HEAVY RAINS
             </div>
 
@@ -159,6 +176,7 @@ for person in people_invited:
                 day before on Friday, May 18th.
             </h3>
 
+             <span class="anchor" id="friday"></span>
             <div class="p-3 p-sm-5 mt-5 text-white" style="background-color: #232D4B">
                 <h1 class="pt-5 text-center display-1 font-weight-bold">FRIDAY</h1>
                 <h1 class="pb-5 text-center display-1 mt-0">MAY 18</h1>
@@ -198,9 +216,9 @@ for person in people_invited:
                 </h3>
             </div>
 
-
+ <span class="anchor" id="saturday"></span>
             <div class="p-3 p-sm-5 mt-5 text-white" style="background-color: #E57200">
-                <h1 class="pt-5 font-weight-bold text-center display-1">SATURDAY</h1>
+                <h1 class="pt-5 font-weight-bold text-center display-4">SATURDAY</h1>
                 <h1 class="pb-5 text-center display-1 mt-0">MAY 19</h1>
 
                 <p>The big day. Click links for relevant google maps directions for the day. Also see the <a class="font-weight-bold text-white" href="http://majorevents.virginia.edu/sites/majorevents2017.virginia.edu/files/WEB_Saturday%20and%20Sunday_Lawn%20Overview.pdf">Lawn Overview and Guest Entrance Map</a> which also indicates the locations of guests services throughout Central Grounds, including information booths, concession stands, and restrooms.</p>
